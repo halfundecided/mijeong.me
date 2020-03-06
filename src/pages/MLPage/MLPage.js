@@ -2,6 +2,8 @@ import React from 'react';
 import '../../assets/styles/index.css';
 import { makeStyles, Grid } from '@material-ui/core';
 import Navbar from '../../components/Navbar';
+import MachineLearning from '../../components/MachineLearning';
+import Footer from '../../components/Footer';
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -24,7 +26,12 @@ export default function MLPage() {
                 <Grid item md={3} xs={12} className={classes.nav}>
                     <Navbar />
                 </Grid>
-                <Grid item md={9} xs={12} className={classes.body}></Grid>
+                <Grid item md={9} xs={12} className={classes.body}>
+                    <MachineLearning />
+                </Grid>
+            </Grid>
+            <Grid container>
+                <Footer />
             </Grid>
         </div>
     );

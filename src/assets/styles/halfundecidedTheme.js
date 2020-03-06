@@ -48,24 +48,10 @@ const fontStack = [
 ];
 
 const halfundecidedTheme = createMuiTheme({
-    typography: {
-        fontFamily: fontStack.join(','),
-        fontSize: 12,
-    },
+    typography: {},
     palette: {
         primary: {
-            // main: '#282C34',
-            // contrastText: '#D7DAE0',
-        },
-        secondary: {
-            // main: '#4834d4',
-        },
-    },
-    overrides: {
-        MuiCssBaseline: {
-            '@global': {
-                '@font-face': proxima,
-            },
+            main: '#403D39',
         },
     },
 });

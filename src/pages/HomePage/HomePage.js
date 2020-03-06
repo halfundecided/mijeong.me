@@ -8,8 +8,8 @@ const useStyles = makeStyles(theme => ({
     container: {
         padding: '70px',
     },
-    body: {
-        border: '1px solid blue',
+    nav: {
+        marginBottom: '70px',
     },
 }));
 
@@ -18,11 +18,11 @@ export default function HomePage() {
 
     return (
         <div className={classes.container}>
-            <Grid container spacing={0} className="wrapper">
-                <Grid item sm={3} xs={12} className={classes.nav}>
+            <Grid container spacing={20} className="wrapper">
+                <Grid item md={3} xs={12} className={classes.nav}>
                     <Navbar />
                 </Grid>
-                <Grid item sm={9} xs={12} className={classes.body}>
+                <Grid item md={9} xs={12} className={classes.body}>
                     <ImageGrid />
                 </Grid>
             </Grid>

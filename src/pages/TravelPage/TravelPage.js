@@ -2,7 +2,6 @@ import React from 'react';
 import '../../assets/styles/index.css';
 import { makeStyles, Grid } from '@material-ui/core';
 import Navbar from '../../components/Navbar';
-import ImageGrid from '../../components/ImageGrid';
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -16,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function HomePage() {
+export default function TravelPage() {
     const classes = useStyles();
 
     return (
@@ -25,9 +24,7 @@ export default function HomePage() {
                 <Grid item md={3} xs={12} className={classes.nav}>
                     <Navbar />
                 </Grid>
-                <Grid item md={9} xs={12} className={classes.body}>
-                    <ImageGrid />
-                </Grid>
+                <Grid item md={9} xs={12} className={classes.body}></Grid>
             </Grid>
         </div>
     );

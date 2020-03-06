@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles, GridList, GridListTile } from '@material-ui/core';
 import withWidth, { isWidthUp, isWidthDown } from '@material-ui/core/withWidth';
 
@@ -32,6 +33,10 @@ const useStyles = makeStyles(theme => ({
         transform: 'translate(-50%, -50%)',
         textTransform: 'uppercase',
     },
+    links: {
+        textDecoration: 'none',
+        color: 'inherit',
+    },
 }));
 
 const tileData = [
@@ -39,33 +44,40 @@ const tileData = [
         img: image1,
         cols: 1,
         title: 'About',
+        link: '/about',
     },
     {
         img: image2,
         cols: 1,
         title: 'Experience',
+        link: '/experience',
     },
     {
         img: image3,
         cols: 1,
         title: 'Projects',
+        link: '/projects',
     },
     {
         img: image4,
         cols: 1,
         title: 'Skills',
+        link: '/skills',
     },
     {
         img: image5,
         cols: 1,
         title: 'Machine Learning',
+        link: '/machine-learning',
     },
     {
         img: image6,
         cols: 1,
         title: 'Travel',
+        link: '/travel',
     },
 ];
+
 const ImageGrid = props => {
     const classes = useStyles();
 
@@ -80,11 +92,13 @@ const ImageGrid = props => {
 
     return (
         <div className={classes.root}>
-            <GridList cellHeight={350} className={classes.gridList} cols={getGridListCols()}>
+            <GridList cellHeight={350} spacing={16} className={classes.gridList} cols={getGridListCols()}>
                 {tileData.map(tile => (
                     <GridListTile className={classes.gridListTile} key={tile.img} cols={tile.cols}>
                         <img className={classes.image} src={tile.img} alt={tile.title} />
-                        <div className={classes.gridText}>{tile.title}</div>
+                        <Link className={classes.links} to={tile.link}>
+                            <div className={classes.gridText}>{tile.title}</div>
+                        </Link>
                     </GridListTile>
                 ))}
             </GridList>

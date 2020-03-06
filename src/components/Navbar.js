@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
-import Logo from '../assets/images/logo.png';
+import '../assets/styles/index.css';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
     logo: {
@@ -20,6 +21,10 @@ const useStyles = makeStyles(theme => ({
         letterSpacing: '-1',
         color: '#4a4a4a',
     },
+    links: {
+        textDecoration: 'none',
+        color: 'inherit',
+    },
 }));
 
 const Navbar = () => {
@@ -27,16 +32,41 @@ const Navbar = () => {
 
     return (
         <>
-            <img src={Logo} className={classes.logo} alt="halfundecided" />
+            {/* <img src={Logo} className={classes.logo} alt="halfundecided" /> */}
+            <h1 className="logo">Halfundecided</h1>
             <ui className={classes.nav}>
-                <li>Experience</li>
-                <li>Projects</li>
-                <li>Skills</li>
-                <li>Machine Learning</li>
-                <li>Travel</li>
+                <li>
+                    <Link className={classes.links} to="/experience">
+                        Experience
+                    </Link>
+                </li>
+                <li>
+                    <Link className={classes.links} to="/projects">
+                        Projects
+                    </Link>
+                </li>
+                <li>
+                    <Link className={classes.links} to="/skills">
+                        Skills
+                    </Link>
+                </li>
+                <li>
+                    <Link className={classes.links} to="/machine-learning">
+                        Machine Learning
+                    </Link>
+                </li>
+                <li>
+                    <Link className={classes.links} to="/travel">
+                        Travel
+                    </Link>
+                </li>
                 <br />
                 <br />
-                <li>About</li>
+                <li>
+                    <Link className={classes.links} to="/about">
+                        About
+                    </Link>
+                </li>
             </ui>
         </>
     );

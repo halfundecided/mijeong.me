@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { makeStyles, IconButton } from '@material-ui/core';
+import { makeStyles, IconButton, Grid, Switch, withStyles } from '@material-ui/core';
 import '../assets/styles/index.css';
 
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
@@ -34,10 +34,60 @@ const useStyles = makeStyles(theme => ({
         marginTop: '10px',
         marginLeft: '-8px',
     },
+    switch: {
+        float: 'right',
+        marginRight: '25px',
+        marginTop: '10px',
+    },
 }));
+
+// const AntSwitch = withStyles(theme => ({
+//     root: {
+//         width: 28,
+//         height: 16,
+//         padding: 0,
+//         display: 'flex',
+//         flexDirection: 'column',
+//         justifyContent: 'flex-end',
+//         // border: '1px solid blue',
+//     },
+//     switchBase: {
+//         padding: 2,
+//         color: theme.palette.grey[500],
+//         '&$checked': {
+//             transform: 'translateX(12px)',
+//             color: theme.palette.common.white,
+//             '& + $track': {
+//                 opacity: 0.8,
+//                 backgroundColor: theme.palette.primary.main,
+//                 borderColor: theme.palette.primary.main,
+//             },
+//         },
+//     },
+//     thumb: {
+//         width: 12,
+//         height: 12,
+//         boxShadow: 'none',
+//     },
+//     track: {
+//         border: `1px solid ${theme.palette.grey[500]}`,
+//         borderRadius: 16 / 2,
+//         opacity: 0.8,
+//         backgroundColor: theme.palette.common.white,
+//     },
+//     checked: {},
+// }))(Switch);
 
 const Navbar = () => {
     const classes = useStyles();
+
+    // const [state, setState] = React.useState({
+    //     checkedA: true,
+    // });
+
+    // const handleChange = name => event => {
+    //     setState({ ...state, [name]: event.target.checked });
+    // };
 
     return (
         <>
@@ -88,10 +138,19 @@ const Navbar = () => {
                 <IconButton>
                     <MailOutlineIcon href="mailto:qksalwjd93@gmail.com" />
                 </IconButton>
-                <IconButton>
-                    <InstagramIcon href="https://www.instagram.com/__mijeong_is__/" />
+                <IconButton href="https://www.instagram.com/__mijeong_is__/">
+                    <InstagramIcon />
                 </IconButton>
             </div>
+            {/* <div className={classes.switch}>
+                <Grid component="label" container alignItems="center" spacing={1}>
+                    <Grid item>KR</Grid>
+                    <Grid item>
+                        <AntSwitch checked={state.checkedA} onChange={handleChange('checkedA')} value="checkedA" />
+                    </Grid>
+                    <Grid item> EN</Grid>
+                </Grid>
+            </div> */}
         </>
     );
 };

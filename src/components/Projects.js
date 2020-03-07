@@ -162,7 +162,7 @@ const Projects = () => {
                             <IconButton href={project.reference} aria-label="share">
                                 <ShareIcon />
                             </IconButton>
-                            <IconButton
+                            {/* <IconButton
                                 className={clsx(classes.expand, {
                                     [classes.expandOpen]: expanded,
                                 })}
@@ -171,13 +171,13 @@ const Projects = () => {
                                 aria-label="show more"
                             >
                                 <ExpandMoreIcon />
-                            </IconButton>
+                            </IconButton> */}
                         </CardActions>
-                        <Collapse in={expanded} timeout="auto" unmountOnExit>
+                        {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
                             <CardContent>
                                 <Typography paragraph>{project.detail}</Typography>
                             </CardContent>
-                        </Collapse>
+                        </Collapse> */}
                     </Card>
                 </Grid>
             ))}

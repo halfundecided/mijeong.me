@@ -21,8 +21,8 @@ const HalfundecidedRouter = () => {
     return (
         <Router>
             <Switch>
-                <Route exact path={'/'} component={() => <Redirect to={'/home'} />} />
-                <Route path={'/home'} component={() => <HomePage />} />
+                {/* <Route exact path={'/'} component={() => <Redirect to={'/home'} />} /> */}
+                <Route exact path={'/'} component={() => <HomePage />} />
                 <Route path={'/about'} component={() => <AboutPage />} />
                 <Route path={'/experience'} component={() => <ExperiencePage />} />
                 <Route path={'/projects'} component={() => <ProjectPage />} />

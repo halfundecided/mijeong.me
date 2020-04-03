@@ -16,16 +16,28 @@ const useStyles = makeStyles(theme => ({
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
+        animation: `$up 1.8s`,
+    },
+    '@keyframes up': {
+        '0%': {
+            opacity: 0,
+            transform: 'translateY(-20px)',
+        },
+        '100%': {
+            opacity: 1,
+            transform: 'translateY(0)',
+        },
     },
     gridListTile: {
         textAlign: 'center',
         color: 'white',
-    },
-    image: {
         '&:hover': {
-            filter: 'brightness(70%) blur(0.5px)',
+            transition: 'transform .4s ease, opacity .3s ease',
+            opacity: 0.6,
+            filter: 'blur(0.5px)',
         },
     },
+    image: {},
     gridText: {
         position: 'absolute',
         top: '50%',

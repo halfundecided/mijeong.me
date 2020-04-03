@@ -9,12 +9,55 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles(theme => ({
+    box: {
+        transform: 'translate(-36%, -15%)',
+        width: '640px',
+        textAlign: 'center',
+    },
+    title: {
+        display: 'inline-block',
+        textAlign: 'center',
+        margin: '0 auto',
+        '&:after': {
+            content: '',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            height: '22px',
+            width: '0%',
+            background: '#999',
+            animation: `$widthize70 .6s 1 cubic-bezier(.7, 0, .175, 1) forwards`,
+            whiteSpace: 'nowrap',
+        },
+    },
+    div: {
+        display: 'inline-block',
+        textAlign: 'center',
+        overflow: 'hidden',
+        width: '0%',
+        animation: `$widthize100 .8s 1 .3s cubic-bezier(.7, 0, .175, 1) forwards`,
+        whiteSpace: 'nowrap',
+    },
     logo: {
-        height: 50,
-        margin: 0,
-        padding: 0,
-        marginLeft: '-30px',
-        marginBottom: '20px',
+        display: 'inline-block',
+        textAlign: 'center',
+        whiteSpace: 'nowrap',
+    },
+    '@keyframes widthize70': {
+        '0%': {
+            width: '0%',
+        },
+        '100%': {
+            width: '70%',
+        },
+    },
+    '@keyframes widthize100': {
+        '0%': {
+            width: '0%',
+        },
+        '100%': {
+            width: '100%',
+        },
     },
     nav: {
         listStyleType: 'none',
@@ -28,7 +71,7 @@ const useStyles = makeStyles(theme => ({
     },
     links: {
         textDecoration: 'none',
-        color: 'inherit',
+        color: '#4D4D4D',
     },
     icons: {
         marginTop: '10px',
@@ -41,58 +84,19 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-// const AntSwitch = withStyles(theme => ({
-//     root: {
-//         width: 28,
-//         height: 16,
-//         padding: 0,
-//         display: 'flex',
-//         flexDirection: 'column',
-//         justifyContent: 'flex-end',
-//         // border: '1px solid blue',
-//     },
-//     switchBase: {
-//         padding: 2,
-//         color: theme.palette.grey[500],
-//         '&$checked': {
-//             transform: 'translateX(12px)',
-//             color: theme.palette.common.white,
-//             '& + $track': {
-//                 opacity: 0.8,
-//                 backgroundColor: theme.palette.primary.main,
-//                 borderColor: theme.palette.primary.main,
-//             },
-//         },
-//     },
-//     thumb: {
-//         width: 12,
-//         height: 12,
-//         boxShadow: 'none',
-//     },
-//     track: {
-//         border: `1px solid ${theme.palette.grey[500]}`,
-//         borderRadius: 16 / 2,
-//         opacity: 0.8,
-//         backgroundColor: theme.palette.common.white,
-//     },
-//     checked: {},
-// }))(Switch);
-
 const Navbar = () => {
     const classes = useStyles();
-
-    // const [state, setState] = React.useState({
-    //     checkedA: true,
-    // });
-
-    // const handleChange = name => event => {
-    //     setState({ ...state, [name]: event.target.checked });
-    // };
 
     return (
         <>
             <Link className={classes.links} to="/">
-                <h1 className="logo">Halfundecided</h1>
+                <div className={classes.box}>
+                    <h2 className={classes.title}>
+                        <div className={classes.div}>
+                            <span className={classes.logo}>Halfundecided.</span>
+                        </div>
+                    </h2>
+                </div>
             </Link>
             <ui className={classes.nav}>
                 <li>

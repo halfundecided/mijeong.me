@@ -2,16 +2,17 @@ import React from 'react';
 import { makeStyles, Avatar, Grid, Fab, Typography } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import avatar from '../assets/images/avatar.jpg';
+import avatar from '../assets/images/avatar1.jpg';
 import resume from '../assets/images/resume2020_black.pdf';
+import '../App.css';
 
 const useStyles = makeStyles(theme => ({
     aboutWrapper: {
         marginBottom: '20rem',
     },
     avatar: {
-        width: theme.spacing(30),
-        height: theme.spacing(30),
+        width: theme.spacing(35),
+        height: theme.spacing(35),
     },
     avatarWrapper: {
         display: 'flex',
@@ -23,12 +24,49 @@ const useStyles = makeStyles(theme => ({
         alignItem: 'center',
         justifyContent: 'center',
         marginTop: theme.spacing(5),
+        animation: `$button-animation 1.1s 1 cubic-bezier(0, 0.78, 0.58, 1)`,
     },
     margin: {
         margin: theme.spacing(1),
     },
     extendedIcon: {
         marginRight: theme.spacing(1),
+    },
+    title: {
+        animation: `$title-animation 2s 1 cubic-bezier(0, 0.78, 0.58, 1)`,
+    },
+    paragraph: {
+        animation: `$paragraph-animation 2.8s 1 cubic-bezier(0, 0.78, 0.58, 1) 0.5s`,
+    },
+    '@keyframes button-animation': {
+        '0%': {
+            opacity: 0,
+            transform: 'rotateX(-75deg) translateY(60px)',
+        },
+        '100%': {
+            opacity: 1,
+            transform: 'rotateX(0deg) translateY(0px)',
+        },
+    },
+    '@keyframes title-animation': {
+        '0%': {
+            opacity: 0,
+            transform: 'rotateX(-75deg) translateY(60px)',
+        },
+        '100%': {
+            opacity: 1,
+            transform: 'rotateX(0deg) translateY(0px)',
+        },
+    },
+    'keyframes paragraph-animation': {
+        '0%': {
+            opacity: 0,
+            transform: 'translateY(30px)',
+        },
+        '100%': {
+            opacity: 1,
+            transform: 'translateY(0px)',
+        },
     },
 }));
 
@@ -50,13 +88,15 @@ const About = () => {
                         GitHub
                     </Fab>
                 </Grid>
-                <Typography variant="h6" gutterBottom>
+
+                <Typography className={classes.title} variant="h6" gutterBottom>
                     Hello
                     <span role="img" aria-label="hi">
                         🙋🏻‍♀️
                     </span>
                     , I'm Mijeong.
                 </Typography>
+
                 <Typography variant="subtitle1" gutterBottom>
                     I'm a Software Developer and a Senior student pursuing B.S. in Computer Science and M.S. in Machine Learning at Stevens Institute
                     of Technology, currently based in New York City.

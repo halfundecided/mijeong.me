@@ -6,12 +6,25 @@ const useStyles = makeStyles(theme => ({
         marginTop: '20px',
         color: 'black',
     },
+    title: {
+        animation: `$title-animation 2s 1 cubic-bezier(0, 0.78, 0.58, 1)`,
+    },
     detail: {
         display: 'flex',
         justifyContent: 'space-between',
     },
     job: {
         marginBottom: '30px',
+    },
+    '@keyframes title-animation': {
+        '0%': {
+            opacity: 0,
+            transform: 'rotateX(-75deg) translateY(60px)',
+        },
+        '100%': {
+            opacity: 1,
+            transform: 'rotateX(0deg) translateY(0px)',
+        },
     },
 }));
 
@@ -20,7 +33,9 @@ const Experience = () => {
     return (
         <div className={classes.container}>
             <div className={classes.job}>
-                <Typography variant="h5">Front-End Developer</Typography>
+                <Typography className={classes.title} variant="h5">
+                    Front-End Developer
+                </Typography>
                 <Divider />
                 <div className={classes.detail}>
                     <Typography variant="subtitle1" gutterBottom>
@@ -72,7 +87,9 @@ const Experience = () => {
                 </Typography>
             </div>
             <div className={classes.job}>
-                <Typography variant="h5">Teaching Assistant</Typography>
+                <Typography className={classes.title} variant="h5">
+                    Teaching Assistant
+                </Typography>
                 <Divider />
                 <div className={classes.detail}>
                     <Typography variant="subtitle1" gutterBottom>
@@ -129,7 +146,9 @@ const Experience = () => {
                 </Typography>
             </div>
             <div className={classes.job}>
-                <Typography variant="h5">Adjunct Instructor</Typography>
+                <Typography className={classes.title} variant="h5">
+                    Adjunct Instructor
+                </Typography>
                 <Divider />
                 <div className={classes.detail}>
                     <Typography variant="subtitle1" gutterBottom>
@@ -154,7 +173,9 @@ const Experience = () => {
                 </Typography>
             </div>
             <div className={classes.job}>
-                <Typography variant="h5">Translator</Typography>
+                <Typography className={classes.title} variant="h5">
+                    Translator
+                </Typography>
                 <Divider />
                 <div className={classes.detail}>
                     <Typography variant="subtitle1" gutterBottom>

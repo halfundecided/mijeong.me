@@ -4,7 +4,6 @@ import SearchIcon from '@material-ui/icons/Search';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import avatar from '../assets/images/avatar1.jpg';
 import resume from '../assets/images/resume2020_black.pdf';
-import '../App.css';
 
 const useStyles = makeStyles(theme => ({
     aboutWrapper: {

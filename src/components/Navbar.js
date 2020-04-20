@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { makeStyles, IconButton, Grid, Switch, withStyles } from '@material-ui/core';
+import { makeStyles, IconButton } from '@material-ui/core';
 import '../assets/styles/index.css';
 
 import MailOutlineIcon from '@material-ui/icons/MailOutline';

@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { makeStyles, Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Avatar, IconButton, Typography } from '@material-ui/core';
+import React from 'react';
+import { makeStyles, Grid } from '@material-ui/core';
 import '../assets/styles/index.css';
-import clsx from 'clsx';
 import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import fractionWeb from '../assets/images/fractionweb.png';
 import fractionApp from '../assets/images/fractionapp.png';
 import consiliumq from '../assets/images/consiliumq.png';
@@ -15,170 +13,208 @@ import educoin from '../assets/images/educoin.png';
 import movieapp from '../assets/images/movieapp.png';
 
 const useStyles = makeStyles(theme => ({
-    root: {
-        maxWidth: 500,
+    card: {
+        fontFamily: "'Raleway', Arial, sans-serif",
+        position: 'relative',
+        overflow: 'hidden',
+        margin: '10px',
+        marginRight: '20px',
+        minWidth: '380px',
+        maxWidth: '580px',
+        width: '100%',
+        background: '#FFFFFF',
+        color: '#000000',
+        WebkitBoxShadow: '5px 0px 10px rgba(0, 0, 0, 0.1)',
+        boxShadow: '5px 0px 10px rgba(0, 0, 0, 0.1)',
+        '& *': {
+            WebkitBoxSizing: 'border-box',
+            boxSizing: 'border-box',
+            WebkitTransition: 'all 0.35s ease-in-out',
+            transition: 'all 0.35s ease-in-out',
+        },
+        '&:before': {
+            position: 'absolute',
+            content: '',
+            height: '100%',
+            width: '100%',
+            background: 'rgba(0, 0, 0, 0.2)',
+            WebkitTransform: 'skewX(-17deg)',
+            transform: 'skewX(-17deg)',
+            WebkitBoxShadow: '15px 0px 25px rgba(0, 0, 0, 0.7)',
+            boxShadow: '15px 0px 25px rgba(0, 0, 0, 0.7)',
+        },
+        '&:hover': {
+            '& figcaption': {
+                bottom: '50px',
+            },
+            '&:before': {
+                WebkitAnimation: 'shadow 0.6s ease-in-out',
+                animation: 'shadow 0.6s ease-in-out',
+            },
+        },
     },
-    media: {
-        height: 0,
-        paddingTop: '90%', // 16:9
-        filter: 'brightness(80%)',
+    image: {
+        width: '50%',
+        overflow: 'hidden',
+        zIndex: 1,
+        WebkitTransform: 'skewX(-15deg)',
+        transform: 'skewX(-15deg)',
     },
-    expand: {
-        transform: 'rotate(0deg)',
-        marginLeft: 'auto',
-        transition: theme.transitions.create('transform', {
-            duration: theme.transitions.duration.shortest,
-        }),
+    img: {
+        position: 'relative',
+        display: 'block',
+        left: '-15%',
+        zIndex: 1,
+        WebkitTransform: 'skew(15deg)',
+        transform: 'skew(15deg)',
+        width: '300px',
+        height: '400px',
+        objectFit: 'cover',
     },
-    expandOpen: {
-        transform: 'rotate(180deg)',
+    figcaption: {
+        padding: '20px 30px 20px 20px',
+        position: 'absolute',
+        right: 0,
+        bottom: '30px',
+        width: '50%',
     },
-    avatar: {
-        backgroundColor: '#754f44',
+    title: {
+        margin: 0,
+        textAlign: 'right',
+        padding: '10px 0',
+        width: '100%',
+        fontSize: '1.3em',
+        fontWeight: 300,
+        textTransform: 'uppercase',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
+    },
+    detail: {
+        margin: 0,
+        textAlign: 'right',
+        padding: '10px 0',
+        width: '100%',
+        fontSize: '0.9em',
+        opacity: 0.8,
+    },
+    icons: {
+        width: '100%',
+        textAlign: 'right',
+        opacity: 0.4,
+        padding: '5px',
+        '&:hover': {
+            opacity: 0.9,
+        },
+    },
+    stacks: {
+        position: 'absolute',
+        bottom: 0,
+        width: '100%',
+        textAlign: 'right',
+        padding: '15px 30px',
+        fontSize: '0.9em',
+        opacity: 1,
+        fontStyle: 'italic',
+        color: '#ffffff',
+        background: '#4a4a4a',
     },
 }));
 const projectData = [
     {
-        avatar: 'F',
         code: 'fraction1',
         title: 'Fraction Web Service',
         period: 'Currently Working',
         image: fractionWeb,
         body: 'React, AWS Lambda, API Gateway, Cognito, Amplify, DynamoDB',
         reference: 'https://fraction.rent/',
-        detail: 'detail1',
     },
     {
-        avatar: 'F',
         code: 'fraction2',
         title: 'Fraction App',
         period: 'Currently Working',
         image: fractionApp,
         body: 'React Native, AWS Lambda, API Gateway, Cognito, Amplify, DynamoDB',
         reference: '',
-        detail: 'detail1',
     },
     {
-        avatar: 'C',
         code: 'consiliumq',
         title: 'ConsiliumQ',
-        period: 'September 2019 - December 2019',
+        period: 'Sep 2019 - Dec 2019',
         image: consiliumq,
         body: 'React, D3.js, TypeScript, GraphQL, MongoDB, AWS',
         reference: 'https://github.com/consiliumQ',
-        detail: 'detail1',
     },
     {
-        avatar: 'M',
         code: 'mood',
         title: 'Mood',
-        period: 'March 2019 - May 2019',
+        period: 'Mar 2019 - May 2019',
         image: mood,
         body: 'HTML5, CSS3, JavaScript, Handlebars, Express, MongoDB',
         reference: 'https://github.com/group1forpatrick/mood',
-        detail: 'detail1',
     },
     {
-        avatar: 'R',
         code: 'rateit',
         title: 'RateIt',
-        period: 'March 2019 - May 2019',
+        period: 'Mar 2019 - May 2019',
         image: rateit,
         body: 'HTML5, CSS3, JavaScript, Handlebars, Express, MongoDB',
         reference: 'https://github.com/halfundecided/rateit-website',
-        detail: 'detail1',
     },
     {
-        avatar: 'S',
         code: 'sharewithme',
         title: 'Share With Me',
-        period: 'February 2019',
+        period: 'Feb 2019',
         image: sharewithme,
         body: 'React, GraphQL, Apollo Client',
         reference: 'https://github.com/halfundecided/sharewithme-react-graphql',
-        detail: 'detail1',
     },
     {
-        avatar: 'M',
         code: 'movieapp',
         title: 'Movie App',
-        period: 'January 2019',
+        period: 'Jan 2019',
         image: movieapp,
         body: 'React',
         reference: 'https://github.com/halfundecided/movie-web-react',
-        detail: 'detail1',
     },
     {
-        avatar: 'E',
         code: 'educoin',
         title: 'EduCoin',
-        period: 'January 2018 - May 2018',
+        period: 'Jan 2018 - May 2018',
         image: educoin,
         body: 'React Native, WordPress, Python, PHP, HTML5',
         reference: 'https://github.com/halfundecided/cryptocurrency_EduCoin',
-        detail: 'detail1',
     },
     {
-        avatar: 'D',
         code: 'DinnerSpinner',
         title: 'Movie App',
-        period: 'September 2017 - December 2017',
+        period: 'Sep 2017 - Dec 2017',
         image: dinnerspinner,
         body: 'HTML5, CSS3, JavaScript',
         reference: 'http://www.mijeong.me/CS146_DinnerSpinner/',
-        detail: 'detail1',
     },
 ];
 
 const Projects = () => {
     const classes = useStyles();
-    const [expanded, setExpanded] = useState(false);
-
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
 
     return (
-        <Grid container spacing={4}>
+        <Grid container spacing={3}>
             {projectData.map(project => (
-                <Grid item md={6} sm={6} xs={12}>
-                    <Card className={classes.root} variant="outlined">
-                        <CardHeader
-                            avatar={
-                                <Avatar aria-label="recipe" className={classes.avatar}>
-                                    {project.avatar}
-                                </Avatar>
-                            }
-                            title={project.title}
-                            subheader={project.period}
-                        />
-                        <CardMedia className={classes.media} image={project.image} title={project.title} />
-                        <CardContent>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                {project.body}
-                            </Typography>
-                        </CardContent>
-                        <CardActions disableSpacing>
-                            <IconButton href={project.reference} aria-label="share">
-                                <ShareIcon />
-                            </IconButton>
-                            {/* <IconButton
-                                className={clsx(classes.expand, {
-                                    [classes.expandOpen]: expanded,
-                                })}
-                                onClick={handleExpandClick}
-                                aria-expanded={expanded}
-                                aria-label="show more"
-                            >
-                                <ExpandMoreIcon />
-                            </IconButton> */}
-                        </CardActions>
-                        {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
-                            <CardContent>
-                                <Typography paragraph>{project.detail}</Typography>
-                            </CardContent>
-                        </Collapse> */}
-                    </Card>
+                <Grid item lg={6} md={12} sm={12} xs={12}>
+                    <figure className={classes.card}>
+                        <figcaption className={classes.figcaption}>
+                            <h2 className={classes.title}>{project.title}</h2>
+                            <p className={classes.detail}>{project.body}</p>
+                            <div className={classes.icons}>
+                                <a href={project.reference}>
+                                    <ShareIcon />
+                                </a>
+                            </div>
+                        </figcaption>
+                        <div className={classes.image}>
+                            <img className={classes.img} src={project.image} alt={project.code} />
+                        </div>
+                        <div className={classes.stacks}>{project.period}</div>
+                    </figure>
                 </Grid>
             ))}
         </Grid>

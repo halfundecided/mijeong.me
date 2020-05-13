@@ -122,7 +122,7 @@ const projectData = [
     {
         code: 'fraction1',
         title: 'Fraction Web Service',
-        period: 'Currently Working',
+        period: 'Sep 2019 - Dec 2019',
         image: fractionWeb,
         body: 'React, AWS Lambda, API Gateway, Cognito, Amplify, DynamoDB',
         reference: 'https://fraction.rent/',
@@ -130,7 +130,7 @@ const projectData = [
     {
         code: 'fraction2',
         title: 'Fraction App',
-        period: 'Currently Working',
+        period: 'Jan 2020 - May 2020',
         image: fractionApp,
         body: 'React Native, AWS Lambda, API Gateway, Cognito, Amplify, DynamoDB',
         reference: '',

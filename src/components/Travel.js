@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { makeStyles, GridList, GridListTile } from '@material-ui/core';
 import withWidth, { isWidthUp, isWidthDown } from '@material-ui/core/withWidth';
-
 import spain from '../assets/images/spain.jpg';
 import canyon from '../assets/images/canyon.jpg';
 import prague from '../assets/images/prague.jpg';
@@ -46,49 +45,49 @@ const tileData = [
         img: spain,
         cols: 1,
         title: 'Spain',
-        link: '/travel/spain',
+        link: '/travel-spain',
     },
     {
         img: canyon,
         cols: 1,
         title: 'Las Vegas & Canyon',
-        link: '/travel/canyon',
+        link: '/travel-canyon',
     },
     {
         img: prague,
         cols: 1,
         title: 'Prague',
-        link: '/travel/prague',
+        link: '/travel-prague',
     },
     {
         img: rome,
         cols: 1,
         title: 'Rome',
-        link: '/travel/rome',
+        link: '/travel-rome',
     },
     {
         img: paris,
         cols: 1,
         title: 'Paris',
-        link: '/travel/paris',
+        link: '/travel-paris',
     },
     {
         img: nyc,
         cols: 1,
         title: 'New York',
-        link: '/travel/newyork',
+        link: '/travel-newyork',
     },
     {
         img: losangeles,
         cols: 1,
         title: 'Los Angeles',
-        link: '/travel/la',
+        link: '/travel-la',
     },
     {
         img: miami,
         cols: 1,
         title: 'Miami',
-        link: '/travel/miami',
+        link: '/travel-miami',
     },
 ];
 

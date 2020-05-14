@@ -120,6 +120,11 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
+                    <a className={classes.links} href="https://www.mijeong.life/">
+                        Blog
+                    </a>
+                </li>
+                <li>
                     <Link className={classes.links} to="/travel">
                         Travel
                     </Link>

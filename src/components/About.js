@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { makeStyles, Avatar, Grid, Fab, Typography, Switch } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import avatar from '../assets/images/avatar1.jpg';
+import avatar from '../assets/images/avatar.jpg';
 import resume from '../assets/images/resume2020_black.pdf';
 
 const useStyles = makeStyles(theme => ({
@@ -28,6 +28,7 @@ const useStyles = makeStyles(theme => ({
         justifyContent: 'center',
         marginTop: theme.spacing(5),
         animation: `$button-animation 1.1s 1 cubic-bezier(0, 0.78, 0.58, 1)`,
+        marginBottom: theme.spacing(4),
     },
     margin: {
         margin: theme.spacing(1),
@@ -81,7 +82,7 @@ const About = () => {
     const handleSwitch = () => {
         setKorean(!korean);
     };
-    if (korean == false) {
+    if (korean === false) {
         return (
             <div>
                 <div className={classes.switch}>
@@ -148,23 +149,12 @@ const About = () => {
                     </Fab>
                 </Grid>
 
-                <Typography className={classes.title} variant="h6" gutterBottom>
+                <Typography className={classes.title} variant="h7" gutterBottom>
                     안녕하세요
                     <span role="img" aria-label="hi">
-                        🙋🏻‍♀️
+                        🙇🏻‍♀️
                     </span>
-                    , I'm Mijeong.
-                </Typography>
-
-                <Typography variant="subtitle1" gutterBottom>
-                    I'm a Software Developer and a Senior student pursuing B.S. in Computer Science and M.S. in Machine Learning at Stevens Institute
-                    of Technology, currently based in New York City.
-                </Typography>
-                <Typography variant="overline" gutterBottom>
-                    I like to make things that make a difference.
-                </Typography>
-                <Typography variant="subtitle1" gutterBottom>
-                    I'm full-time learner, I love to learn new things. I love yoga, traveling, Web/App development.
+                    뉴욕에서 머신러닝을 공부하고있는 개발자입니다.
                 </Typography>
             </Grid>
         </div>

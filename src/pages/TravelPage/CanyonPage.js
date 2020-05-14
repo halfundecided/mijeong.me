@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../assets/styles/index.css';
 import { makeStyles, Grid } from '@material-ui/core';
+import Gallery from 'react-photo-gallery';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
@@ -16,6 +17,8 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
+const photos = [];
+
 export default function CanyonPage() {
     const classes = useStyles();
 
@@ -26,7 +29,8 @@ export default function CanyonPage() {
                     <Navbar />
                 </Grid>
                 <Grid item md={9} xs={12} className={classes.body}>
-                    asdfs
+                    <h1>2019 Mat</h1>
+                    <Gallery photos={photos} direction="column" />
                 </Grid>
             </Grid>
             <Grid container>

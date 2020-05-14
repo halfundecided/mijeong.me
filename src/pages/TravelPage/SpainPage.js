@@ -51,7 +51,7 @@ const photos = [
     {
         src: 'https://s3.amazonaws.com/mijeong.me/SPAIN_0768.jpg',
         width: 4,
-        height: 3,
+        height: 5,
     },
     {
         src: 'https://s3.amazonaws.com/mijeong.me/SPAIN_1016.JPG',
@@ -185,6 +185,7 @@ export default function SpainPage() {
                     <Navbar />
                 </Grid>
                 <Grid item md={9} xs={12} className={classes.body}>
+                    <h2>March 2019</h2>
                     <Gallery photos={photos} direction="column" />
                 </Grid>
             </Grid>

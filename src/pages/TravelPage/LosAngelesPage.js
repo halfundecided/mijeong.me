@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../assets/styles/index.css';
 import { makeStyles, Grid } from '@material-ui/core';
+import Gallery from 'react-photo-gallery';
 import Navbar from '../../components/Navbar';
-import Projects from '../../components/Projects';
 import Footer from '../../components/Footer';
 
 const useStyles = makeStyles(theme => ({
@@ -17,7 +17,70 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function LosAngelesPage() {
+const photos = [
+    {
+        src: 'https://s3.amazonaws.com/mijeong.me/LA_6951.jpg',
+        width: 3,
+        height: 3,
+    },
+    {
+        src: 'https://s3.amazonaws.com/mijeong.me/LA_8320.JPG',
+        width: 5,
+        height: 4,
+    },
+    {
+        src: 'https://s3.amazonaws.com/mijeong.me/LA_8341.JPG',
+        width: 5,
+        height: 4,
+    },
+    {
+        src: 'https://s3.amazonaws.com/mijeong.me/LA_8408.jpg',
+        width: 4,
+        height: 4,
+    },
+    {
+        src: 'https://s3.amazonaws.com/mijeong.me/LA_8428.jpg',
+        width: 5,
+        height: 4,
+    },
+    {
+        src: 'https://s3.amazonaws.com/mijeong.me/LA_8543.jpg',
+        width: 5,
+        height: 4,
+    },
+    {
+        src: 'https://s3.amazonaws.com/mijeong.me/LA_8558.jpg',
+        width: 5,
+        height: 4,
+    },
+    {
+        src: 'https://s3.amazonaws.com/mijeong.me/LA_8855.JPG',
+        width: 4,
+        height: 4,
+    },
+    {
+        src: 'https://s3.amazonaws.com/mijeong.me/LA_8858.JPG',
+        width: 5,
+        height: 4,
+    },
+    {
+        src: 'https://s3.amazonaws.com/mijeong.me/LA_8859.JPG',
+        width: 4,
+        height: 4,
+    },
+    {
+        src: 'https://s3.amazonaws.com/mijeong.me/LA_8863.JPG',
+        width: 4,
+        height: 4,
+    },
+    {
+        src: 'https://s3.amazonaws.com/mijeong.me/LA_8864.JPG',
+        width: 4,
+        height: 4,
+    },
+];
+
+export default function ParisPage() {
     const classes = useStyles();
 
     return (
@@ -27,7 +90,8 @@ export default function LosAngelesPage() {
                     <Navbar />
                 </Grid>
                 <Grid item md={9} xs={12} className={classes.body}>
-                    <Projects />
+                    <h1>2019 Jan</h1>
+                    <Gallery photos={photos} direction="column" />
                 </Grid>
             </Grid>
             <Grid container>

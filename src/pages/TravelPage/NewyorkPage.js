@@ -2,7 +2,6 @@ import React from 'react';
 import '../../assets/styles/index.css';
 import { makeStyles, Grid } from '@material-ui/core';
 import Navbar from '../../components/Navbar';
-import Projects from '../../components/Projects';
 import Footer from '../../components/Footer';
 
 const useStyles = makeStyles(theme => ({
@@ -27,7 +26,7 @@ export default function NewyorkPage() {
                     <Navbar />
                 </Grid>
                 <Grid item md={9} xs={12} className={classes.body}>
-                    <Projects />
+                    This is where I live
                 </Grid>
             </Grid>
             <Grid container>

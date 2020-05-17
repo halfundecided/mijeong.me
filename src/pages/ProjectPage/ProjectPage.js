@@ -1,9 +1,12 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import '../../assets/styles/index.css';
 import { makeStyles, Grid } from '@material-ui/core';
 import Navbar from '../../components/Navbar';
 import Projects from '../../components/Projects';
 import Footer from '../../components/Footer';
+
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const useStyles = makeStyles(theme => ({
     container: {

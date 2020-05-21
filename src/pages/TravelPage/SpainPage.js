@@ -15,6 +15,19 @@ const useStyles = makeStyles(theme => ({
     nav: {
         marginBottom: '70px',
     },
+    title: {
+        animation: `$title-animation 2s 1 cubic-bezier(0, 0.78, 0.58, 1)`,
+    },
+    '@keyframes title-animation': {
+        '0%': {
+            opacity: 0,
+            transform: 'rotateX(-75deg) translateY(60px)',
+        },
+        '100%': {
+            opacity: 1,
+            transform: 'rotateX(0deg) translateY(0px)',
+        },
+    },
 }));
 
 const photos = [
@@ -185,7 +198,7 @@ export default function SpainPage() {
                     <Navbar />
                 </Grid>
                 <Grid item md={9} xs={12} className={classes.body}>
-                    <h2>March 2019</h2>
+                    <h2 className={classes.title}>March 2019</h2>
                     <Gallery photos={photos} direction="column" />
                 </Grid>
             </Grid>

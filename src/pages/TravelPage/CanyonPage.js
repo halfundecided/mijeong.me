@@ -15,10 +15,10 @@ const useStyles = makeStyles(theme => ({
     nav: {
         marginBottom: '70px',
     },
-    photos: {
-        animation: `$photo-animation 2s 1 cubic-bezier(0, 0.78, 0.58, 1)`,
+    title: {
+        animation: `$title-animation 2s 1 cubic-bezier(0, 0.78, 0.58, 1)`,
     },
-    '@keyframes photo-animation': {
+    '@keyframes title-animation': {
         '0%': {
             opacity: 0,
             transform: 'rotateX(-75deg) translateY(60px)',
@@ -148,8 +148,8 @@ export default function CanyonPage() {
                     <Navbar />
                 </Grid>
                 <Grid item md={9} xs={12} className={classes.body}>
-                    <h1>2019 Jan</h1>
-                    <Gallery className={classes.photos} photos={photos} direction="column" />
+                    <h1 className={classes.title}>2019 Jan</h1>
+                    <Gallery photos={photos} direction="column" />
                 </Grid>
             </Grid>
             <Grid container>

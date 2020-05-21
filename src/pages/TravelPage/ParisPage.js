@@ -15,6 +15,19 @@ const useStyles = makeStyles(theme => ({
     nav: {
         marginBottom: '70px',
     },
+    title: {
+        animation: `$title-animation 2s 1 cubic-bezier(0, 0.78, 0.58, 1)`,
+    },
+    '@keyframes title-animation': {
+        '0%': {
+            opacity: 0,
+            transform: 'rotateX(-75deg) translateY(60px)',
+        },
+        '100%': {
+            opacity: 1,
+            transform: 'rotateX(0deg) translateY(0px)',
+        },
+    },
 }));
 
 const photos = [
@@ -80,7 +93,7 @@ export default function ParisPage() {
                     <Navbar />
                 </Grid>
                 <Grid item md={9} xs={12} className={classes.body}>
-                    <h1>2016 May</h1>
+                    <h1 className={classes.title}>2016 May</h1>
                     <Gallery photos={photos} direction="column" />
                 </Grid>
             </Grid>

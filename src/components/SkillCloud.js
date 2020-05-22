@@ -2,13 +2,46 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { TagCloud } from 'react-tagcloud';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     wrapper: {
         marginTop: '3rem',
         marginBottom: '5rem',
         fontFamily: 'Roboto',
     },
-});
+    language: {
+        width: '40%',
+        textAlign: 'left',
+        float: 'right',
+        animation: `$skill-animation 1s 1 cubic-bezier(0, 0.2, 0.58, 1.5)`,
+    },
+    ml: {
+        width: '70%',
+        textAlign: 'right',
+        animation: `$skill-animation 4s 1 cubic-bezier(0, 0.78, 0.58, 1)`,
+    },
+    web: {
+        width: '100%',
+        textAlign: 'left',
+        marginTop: '10px',
+        animation: `$skill-animation 2s 1 cubic-bezier(0, 0.78, 0.58, 2)`,
+    },
+    tool: {
+        width: '60%',
+        textAlign: 'right',
+        float: 'right',
+        animation: `$skill-animation 5s 1 cubic-bezier(0, 0.78, 0.58, 1)`,
+    },
+    '@keyframes skill-animation': {
+        '0%': {
+            opacity: 0,
+            transform: 'rotateX(-65deg) translateY(50px)',
+        },
+        '100%': {
+            opacity: 1,
+            transform: 'rotateX(0deg) translateY(0px)',
+        },
+    },
+}));
 const languages = [
     { value: 'TypeScript', count: 20 },
     { value: 'C', count: 18 },
@@ -87,31 +120,10 @@ const SkillCloud = () => {
     const classes = useStyles();
     return (
         <div className={classes.wrapper}>
-            <TagCloud
-                style={{ width: '40%', textAlign: 'left', float: 'right' }}
-                minSize={12}
-                maxSize={40}
-                shuffle="true"
-                colorOptions={option1}
-                tags={languages}
-            />
-            <TagCloud style={{ width: '70%', textAlign: 'right' }} minSize={12} maxSize={36} shuffle="true" colorOptions={option4} tags={ml} />
-            <TagCloud
-                style={{ width: '100%', textAlign: 'left', marginTop: '10px' }}
-                minSize={12}
-                maxSize={40}
-                shuffle="true"
-                colorOptions={option2}
-                tags={web}
-            />
-            <TagCloud
-                style={{ width: '60%', textAlign: 'right', float: 'right' }}
-                minSize={12}
-                maxSize={38}
-                shuffle="true"
-                colorOptions={option3}
-                tags={tools}
-            />
+            <TagCloud className={classes.language} minSize={12} maxSize={40} shuffle="true" colorOptions={option1} tags={languages} />
+            <TagCloud className={classes.ml} minSize={12} maxSize={36} shuffle="true" colorOptions={option4} tags={ml} />
+            <TagCloud className={classes.web} minSize={12} maxSize={40} shuffle="true" colorOptions={option2} tags={web} />
+            <TagCloud className={classes.tool} minSize={12} maxSize={38} shuffle="true" colorOptions={option3} tags={tools} />
         </div>
     );
 };

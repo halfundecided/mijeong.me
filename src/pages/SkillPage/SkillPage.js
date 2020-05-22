@@ -2,7 +2,7 @@ import React from 'react';
 import '../../assets/styles/index.css';
 import { makeStyles, Grid } from '@material-ui/core';
 import Navbar from '../../components/Navbar';
-import Skills from '../../components/Skills';
+// import Skills from '../../components/Skills';
 import SkillCloud from '../../components/SkillCloud';
 import Footer from '../../components/Footer';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { makeStyles, GridList, GridListTile } from '@material-ui/core';
 import withWidth, { isWidthUp, isWidthDown } from '@material-ui/core/withWidth';
 import spain from '../assets/images/spain.jpg';

@@ -3,13 +3,6 @@ import { Link } from 'react-router-dom';
 import { makeStyles, GridList, GridListTile } from '@material-ui/core';
 import withWidth, { isWidthUp, isWidthDown } from '@material-ui/core/withWidth';
 
-// import image1 from '../assets/images/image1.jpg';
-// import image2 from '../assets/images/image2.jpg';
-// import image3 from '../assets/images/image3.jpg';
-// import image4 from '../assets/images/image4.jpg';
-// import image5 from '../assets/images/image5.jpg';
-// import image6 from '../assets/images/image6.jpg';
-
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',

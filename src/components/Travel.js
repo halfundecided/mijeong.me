@@ -63,49 +63,49 @@ const useStyles = makeStyles(theme => ({
 
 const tileData = [
     {
-        img: spain,
+        img: 'https://s3.amazonaws.com/mijeong.me/spain.jpg',
         cols: 1,
         title: 'Spain',
         link: '/travel-spain',
     },
     {
-        img: canyon,
+        img: 'https://s3.amazonaws.com/mijeong.me/canyon.jpg',
         cols: 1,
         title: 'Las Vegas & Canyon',
         link: '/travel-canyon',
     },
     {
-        img: prague,
+        img: 'https://s3.amazonaws.com/mijeong.me/prague.jpg',
         cols: 1,
         title: 'Prague',
         link: '/travel-prague',
     },
     {
-        img: rome,
+        img: 'https://s3.amazonaws.com/mijeong.me/rome.jpg',
         cols: 1,
         title: 'Rome',
         link: '/travel-rome',
     },
     {
-        img: paris,
+        img: 'https://s3.amazonaws.com/mijeong.me/paris.jpg',
         cols: 1,
         title: 'Paris',
         link: '/travel-paris',
     },
     {
-        img: nyc,
+        img: 'https://s3.amazonaws.com/mijeong.me/nyc.jpg',
         cols: 1,
         title: 'New York',
         link: '/travel-newyork',
     },
     {
-        img: losangeles,
+        img: 'https://s3.amazonaws.com/mijeong.me/losangeles.jpg',
         cols: 1,
         title: 'Los Angeles',
         link: '/travel-la',
     },
     {
-        img: miami,
+        img: 'https://s3.amazonaws.com/mijeong.me/miami.jpg',
         cols: 1,
         title: 'Miami',
         link: '/travel-miami',

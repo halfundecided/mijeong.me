@@ -7,7 +7,7 @@ const useStyles = makeStyles(() => ({
         flex: 1,
         padding: '30px',
         margin: 0,
-        textAlign: 'center',
+        textAlign: 'end',
         fontSize: '0.8rem',
         textTransform: 'uppercase',
     },

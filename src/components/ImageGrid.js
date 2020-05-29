@@ -16,9 +16,9 @@ const useStyles = makeStyles(theme => ({
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
-        animation: `$up 1.8s`,
+        animation: `$down 1.8s`,
     },
-    '@keyframes up': {
+    '@keyframes down': {
         '0%': {
             opacity: 0,
             transform: 'translateY(-20px)',
@@ -31,19 +31,29 @@ const useStyles = makeStyles(theme => ({
     gridListTile: {
         textAlign: 'center',
         color: 'white',
+    },
+    image: {
         '&:hover': {
             transition: 'transform .4s ease, opacity .3s ease',
-            opacity: 0.6,
+            opacity: 0.9,
             filter: 'blur(0.5px)',
         },
     },
-    image: {},
+
     gridText: {
         position: 'absolute',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
         textTransform: 'uppercase',
+        MozUserSelect: 'none',
+        KhtmlUserSelect: 'none',
+        WebkitUserSelect: 'none',
+        userSelect: 'none',
+        '&:hover': {
+            transition: '.6s',
+            transform: 'translate(-50%, -50%) scale(1.3)',
+        },
     },
     links: {
         textDecoration: 'none',

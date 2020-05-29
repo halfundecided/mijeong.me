@@ -17,6 +17,17 @@ const useStyles = makeStyles(theme => ({
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
+        animation: `$down 1.8s`,
+    },
+    '@keyframes down': {
+        '0%': {
+            opacity: 0,
+            transform: 'translateY(-20px)',
+        },
+        '100%': {
+            opacity: 1,
+            transform: 'translateY(0)',
+        },
     },
     gridListTile: {
         textAlign: 'center',
@@ -24,7 +35,9 @@ const useStyles = makeStyles(theme => ({
     },
     image: {
         '&:hover': {
-            filter: 'brightness(70%) blur(0.5px)',
+            transition: 'transform .4s ease, opacity .3s ease',
+            opacity: 0.9,
+            filter: 'blur(0.5px)',
         },
     },
     gridText: {
@@ -33,6 +46,14 @@ const useStyles = makeStyles(theme => ({
         left: '50%',
         transform: 'translate(-50%, -50%)',
         textTransform: 'uppercase',
+        MozUserSelect: 'none',
+        KhtmlUserSelect: 'none',
+        WebkitUserSelect: 'none',
+        userSelect: 'none',
+        '&:hover': {
+            transition: '.6s',
+            transform: 'translate(-50%, -50%) scale(1.3)',
+        },
     },
     links: {
         textDecoration: 'none',

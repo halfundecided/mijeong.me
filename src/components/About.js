@@ -14,22 +14,25 @@ const useStyles = makeStyles(theme => ({
     aboutWrapper: {
         marginBottom: '20rem',
     },
-    // avatar: {
-    //     width: theme.spacing(35),
-    //     height: theme.spacing(35),
-    //     border: `1px solid blue`,
-    // },
     avatarWrapper: {
         display: 'flex',
         alignItem: 'center',
         justifyContent: 'center',
         perspective: `500px`,
-        '&:hover': {
+        '&:focus': {
             '& $avatarFront': {
-                transform: `rotateX(180deg)`,
+                transform: 'rotateX(180deg)',
             },
             '& $avatarBack': {
-                transform: `rotateX(360deg)`,
+                transform: 'rotateX(360deg)',
+            },
+        },
+        '&:hover': {
+            '& $avatarFront': {
+                transform: 'rotateX(180deg)',
+            },
+            '& $avatarBack': {
+                transform: 'rotateX(360deg)',
             },
         },
     },
@@ -52,7 +55,7 @@ const useStyles = makeStyles(theme => ({
         MozBackfaceVisibility: 'none',
         backfaceVisivility: 'none',
         transition: `.8s`,
-        transform: `rotateX(180deg)`,
+        transform: 'rotateX(180deg)',
         boxShadow: '0 10px 8px -6px #CDCDCD',
     },
     buttonWrapper: {

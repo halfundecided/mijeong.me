@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { makeStyles, Avatar, Grid, Fab, Typography, Switch } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import avatar from '../assets/images/avatar.jpg';
+import avatarFront from '../assets/images/avatarFront.png';
+import avatarBack from '../assets/images/avatarBack.png';
 import resume from '../assets/images/resume2020_black.pdf';
 
 const useStyles = makeStyles(theme => ({
@@ -13,20 +14,52 @@ const useStyles = makeStyles(theme => ({
     aboutWrapper: {
         marginBottom: '20rem',
     },
-    avatar: {
-        width: theme.spacing(35),
-        height: theme.spacing(35),
-    },
+    // avatar: {
+    //     width: theme.spacing(35),
+    //     height: theme.spacing(35),
+    //     border: `1px solid blue`,
+    // },
     avatarWrapper: {
         display: 'flex',
         alignItem: 'center',
         justifyContent: 'center',
+        perspective: `500px`,
+        '&:hover': {
+            '& $avatarFront': {
+                transform: `rotateX(180deg)`,
+            },
+            '& $avatarBack': {
+                transform: `rotateX(360deg)`,
+            },
+        },
+    },
+    avatarFront: {
+        width: theme.spacing(35),
+        height: theme.spacing(35),
+        position: `absolute`,
+        WebkitBackfaceVisibility: 'hidden',
+        MozBackfaceVisibility: 'hidden',
+        backfaceVisivility: 'hidden',
+        transition: `.8s`,
+        zIndex: 1,
+        boxShadow: '0 10px 8px -6px #CDCDCD',
+    },
+    avatarBack: {
+        width: theme.spacing(35),
+        height: theme.spacing(35),
+        position: `absolute`,
+        WebkitBackfaceVisibility: 'none',
+        MozBackfaceVisibility: 'none',
+        backfaceVisivility: 'none',
+        transition: `.8s`,
+        transform: `rotateX(180deg)`,
+        boxShadow: '0 10px 8px -6px #CDCDCD',
     },
     buttonWrapper: {
         display: 'flex',
         alignItem: 'center',
         justifyContent: 'center',
-        marginTop: theme.spacing(5),
+        marginTop: theme.spacing(40),
         animation: `$button-animation 1.1s 1 cubic-bezier(0, 0.78, 0.58, 1)`,
         marginBottom: theme.spacing(4),
     },
@@ -92,7 +125,8 @@ const About = () => {
                 </div>
                 <Grid container className={classes.aboutWrapper}>
                     <Grid item xs={12} className={classes.avatarWrapper}>
-                        <Avatar alt="Mijeong" src={avatar} className={classes.avatar} />
+                        <Avatar alt="Mijeong" src={avatarFront} className={classes.avatarFront} />
+                        <Avatar alt="Mijeong" src={avatarBack} className={classes.avatarBack} />
                     </Grid>
                     <Grid item xs={12} className={classes.buttonWrapper}>
                         <Fab variant="extended" size="medium" color="primary" href={resume} className={classes.margin}>
@@ -136,7 +170,8 @@ const About = () => {
             </div>
             <Grid container className={classes.aboutWrapper}>
                 <Grid item xs={12} className={classes.avatarWrapper}>
-                    <Avatar alt="Mijeong" src={avatar} className={classes.avatar} />
+                    <Avatar alt="Mijeong" src={avatarFront} className={classes.avatarFront} />
+                    <Avatar alt="Mijeong" src={avatarBack} className={classes.avatarBack} />
                 </Grid>
                 <Grid item xs={12} className={classes.buttonWrapper}>
                     <Fab variant="extended" size="medium" color="primary" href={resume} className={classes.margin}>

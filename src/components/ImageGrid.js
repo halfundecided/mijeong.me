@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { makeStyles, GridList, GridListTile } from '@material-ui/core';
 import withWidth, { isWidthUp, isWidthDown } from '@material-ui/core/withWidth';
 
-import image1 from '../assets/images/image1.jpg';
-import image2 from '../assets/images/image2.jpg';
-import image3 from '../assets/images/image3.jpg';
-import image4 from '../assets/images/image4.jpg';
-import image5 from '../assets/images/image5.jpg';
-import image6 from '../assets/images/image6.jpg';
+// import image1 from '../assets/images/image1.jpg';
+// import image2 from '../assets/images/image2.jpg';
+// import image3 from '../assets/images/image3.jpg';
+// import image4 from '../assets/images/image4.jpg';
+// import image5 from '../assets/images/image5.jpg';
+// import image6 from '../assets/images/image6.jpg';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -63,37 +63,37 @@ const useStyles = makeStyles(theme => ({
 
 const tileData = [
     {
-        img: image1,
+        img: 'https://s3.amazonaws.com/mijeong.me/image1.jpg',
         cols: 1,
         title: 'About',
         link: '/about',
     },
     {
-        img: image2,
+        img: 'https://s3.amazonaws.com/mijeong.me/image2.jpg',
         cols: 1,
         title: 'Experience',
         link: '/experience',
     },
     {
-        img: image3,
+        img: 'https://s3.amazonaws.com/mijeong.me/image3.jpg',
         cols: 1,
         title: 'Projects',
         link: '/projects',
     },
     {
-        img: image4,
+        img: 'https://s3.amazonaws.com/mijeong.me/image4.jpg',
         cols: 1,
         title: 'Skills',
         link: '/skills',
     },
     {
-        img: image5,
+        img: 'https://s3.amazonaws.com/mijeong.me/image5.jpg',
         cols: 1,
         title: 'Machine Learning',
         link: '/machine-learning',
     },
     {
-        img: image6,
+        img: 'https://s3.amazonaws.com/mijeong.me/image6.jpg',
         cols: 1,
         title: 'Travel',
         link: '/travel',
@@ -116,7 +116,7 @@ const ImageGrid = props => {
         <div className={classes.root}>
             <GridList cellHeight={350} spacing={16} className={classes.gridList} cols={getGridListCols()}>
                 {tileData.map(tile => (
-                    <GridListTile className={classes.gridListTile} key={tile.img} cols={tile.cols}>
+                    <GridListTile className={classes.gridListTile} key={tile.title} cols={tile.cols}>
                         <img className={classes.image} src={tile.img} alt={tile.title} />
                         <Link className={classes.links} to={tile.link}>
                             <div className={classes.gridText}>{tile.title}</div>

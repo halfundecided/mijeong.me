@@ -2,14 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles, GridList, GridListTile } from '@material-ui/core';
 import withWidth, { isWidthUp, isWidthDown } from '@material-ui/core/withWidth';
-import spain from '../assets/images/spain.jpg';
-import canyon from '../assets/images/canyon.jpg';
-import prague from '../assets/images/prague.jpg';
-import paris from '../assets/images/paris.jpg';
-import rome from '../assets/images/rome.jpg';
-import nyc from '../assets/images/nyc.jpg';
-import losangeles from '../assets/images/losangeles.jpg';
-import miami from '../assets/images/miami.jpg';
 
 const useStyles = makeStyles(theme => ({
     root: {

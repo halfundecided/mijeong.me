@@ -3,7 +3,7 @@ import '../../assets/styles/index.css';
 import { makeStyles, Grid } from '@material-ui/core';
 import Navbar from '../../components/Navbar';
 // import Skills from '../../components/Skills';
-import SkillCloud from '../../components/SkillCloud';
+import SkillGraph from '../../components/SkillGraph';
 import Footer from '../../components/Footer';
 
 const useStyles = makeStyles(theme => ({
@@ -28,7 +28,7 @@ export default function SkillPage() {
                     <Navbar />
                 </Grid>
                 <Grid item md={9} xs={12} className={classes.body}>
-                    <SkillCloud />
+                    <SkillGraph />
                 </Grid>
             </Grid>
             <Grid container>

@@ -163,7 +163,7 @@ const SkillGraph = () => {
             <h3>Web Dev Libraries/Frameworks</h3>
             <Grid container className={classes.root} spacing={2}>
                 <Grid item xs={6} sm={3} md={2}>
-                    <AnimatedProgressProvider valueStart={0} valueEnd={85} duration={1.8} easingFunction={easeQuadInOut}>
+                    <AnimatedProgressProvider valueStart={0} valueEnd={85} duration={3.5} easingFunction={easeQuadInOut}>
                         {value => {
                             const roundedValue = Math.round(value);
                             return (

@@ -124,11 +124,11 @@ const Navbar = () => {
                         Blog
                     </a>
                 </li>
-                <li>
+                {/* <li>
                     <Link className={classes.links} to="/travel">
                         Travel
                     </Link>
-                </li>
+                </li> */}
                 <br />
                 <br />
                 <li>

@@ -89,7 +89,7 @@ const tileData = [
         img: 'https://s3.amazonaws.com/mijeong.me/image6.jpg',
         cols: 1,
         title: 'Travel',
-        link: '/travel',
+        link: '',
     },
 ];
 

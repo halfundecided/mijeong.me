@@ -28,7 +28,7 @@ const HalfundecidedRouter = () => {
                 <Route path={'/projects'} component={() => <ProjectPage />} />
                 <Route path={'/skills'} component={() => <SkillPage />} />
                 <Route path={'/machine-learning'} component={() => <MLPage />} />
-                <Route path={'/travel'} component={() => <TravelPage />} />
+                {/* <Route path={'/travel'} component={() => <TravelPage />} />
                 <Route path={'/travel-spain'} component={() => <SpainPage />} />
                 <Route path={'/travel-canyon'} component={() => <CanyonPage />} />
                 <Route path={'/travel-prague'} component={() => <PraguePage />} />
@@ -36,7 +36,7 @@ const HalfundecidedRouter = () => {
                 <Route path={'/travel-paris'} component={() => <ParisPage />} />
                 <Route path={'/travel-newyork'} component={() => <NewyorkPage />} />
                 <Route path={'/travel-la'} component={() => <LosAngelesPage />} />
-                <Route path={'/travel-miami'} component={() => <MiamiPage />} />
+                <Route path={'/travel-miami'} component={() => <MiamiPage />} /> */}
             </Switch>
         </Router>
     );

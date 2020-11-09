@@ -27,7 +27,7 @@ const HalfundecidedRouter = () => {
                 <Route path={'/experience'} component={() => <ExperiencePage />} />
                 <Route path={'/projects'} component={() => <ProjectPage />} />
                 <Route path={'/skills'} component={() => <SkillPage />} />
-                <Route path={'/machine-learning'} component={() => <MLPage />} />
+                {/* <Route path={'/machine-learning'} component={() => <MLPage />} /> */}
                 {/* <Route path={'/travel'} component={() => <TravelPage />} />
                 <Route path={'/travel-spain'} component={() => <SpainPage />} />
                 <Route path={'/travel-canyon'} component={() => <CanyonPage />} />

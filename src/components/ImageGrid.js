@@ -79,18 +79,18 @@ const tileData = [
         title: 'Skills',
         link: '/skills',
     },
-    {
-        img: 'https://s3.amazonaws.com/mijeong.me/image5.jpg',
-        cols: 1,
-        title: 'Machine Learning',
-        link: '/machine-learning',
-    },
-    {
-        img: 'https://s3.amazonaws.com/mijeong.me/image6.jpg',
-        cols: 1,
-        title: 'Travel',
-        link: '',
-    },
+    // {
+    //     img: 'https://s3.amazonaws.com/mijeong.me/image5.jpg',
+    //     cols: 1,
+    //     title: 'Machine Learning',
+    //     link: '/machine-learning',
+    // },
+    // {
+    //     img: 'https://s3.amazonaws.com/mijeong.me/image6.jpg',
+    //     cols: 1,
+    //     title: 'Travel',
+    //     link: '',
+    // },
 ];
 
 const ImageGrid = props => {

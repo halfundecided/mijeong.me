@@ -114,11 +114,11 @@ const Navbar = () => {
                         Skills
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link className={classes.links} to="/machine-learning">
                         Machine Learning
                     </Link>
-                </li>
+                </li> */}
                 <li>
                     <a className={classes.links} href="https://www.mijeong.life/">
                         Blog

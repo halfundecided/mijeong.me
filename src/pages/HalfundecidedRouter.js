@@ -31,7 +31,6 @@ const HalfundecidedRouter = () => {
                 {/* <Route path={'/travel'} component={() => <TravelPage />} />
                 <Route path={'/travel-spain'} component={() => <SpainPage />} />
                 <Route path={'/travel-canyon'} component={() => <CanyonPage />} />
-                <Route path={'/travel-prague'} component={() => <PraguePage />} />
                 <Route path={'/travel-rome'} component={() => <RomePage />} />
                 <Route path={'/travel-paris'} component={() => <ParisPage />} />
                 <Route path={'/travel-newyork'} component={() => <NewyorkPage />} />

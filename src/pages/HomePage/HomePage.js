@@ -1,12 +1,13 @@
 import React from 'react';
 import { Header, MediumFeed } from '../../components';
-import { Space, Typography, Divider, Tag } from 'antd';
+import { Space, Typography, Divider, Tag, Carousel, Card } from 'antd';
 import { SyncOutlined } from '@ant-design/icons';
+import projectData from '../../data/projects';
 
 const { Title, Paragraph, Text, Link } = Typography;
 
 export default function HomePage() {
-  const section1 = (
+  const introduction = (
     <Typography>
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit consectetur neque.
@@ -23,7 +24,7 @@ export default function HomePage() {
       <Divider />
     </Typography>
   );
-  const section2 = (
+  const experience = (
     <Typography>
       <Title level={3}>Experience</Title>
       <Paragraph>
@@ -36,23 +37,46 @@ export default function HomePage() {
       <Divider />
     </Typography>
   );
+
+  console.log(projectData[0].title);
+  const projects = (
+    <>
+      <Typography>
+        <Title level={3}>Projects</Title>
+      </Typography>
+      <Carousel className="project-carousel">
+        {projectData.slice(0, 5).map((project) => {
+          return (
+            <div>
+              <h1>{project.code}</h1>
+            </div>
+          );
+        })}
+      </Carousel>
+      <Divider />
+    </>
+  );
   const writings = (
     <>
       <Typography>
         <Title level={3}>Writings</Title>
-        <Tag icon={<SyncOutlined spin />} color="#f7b0b1">
-          Sometimes Writing
-        </Tag>
+        <div className="writing-tag">
+          <Tag icon={<SyncOutlined spin />} color="#f7b0b1">
+            Actively Writing
+          </Tag>
+        </div>
       </Typography>
       <MediumFeed />
     </>
   );
+
   return (
     <div>
       <Header />
       <div className="home-contents">
-        {section1}
-        {section2}
+        {introduction}
+        {experience}
+        {projects}
         {writings}
       </div>
     </div>

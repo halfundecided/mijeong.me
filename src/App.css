@@ -29,10 +29,23 @@
   max-width: 50rem;
 }
 
+.writing-tag {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .medium-tags {
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
+}
+
+.project-carousel {
+  height: 300px;
+  color: #000;
+  line-height: 160px;
+  text-align: center;
+  /* background-color: #364d79; */
 }
 
 @media screen and (max-width: 500px) {

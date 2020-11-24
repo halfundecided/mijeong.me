@@ -1,18 +1,12 @@
 import React from 'react';
 import { Card, Button, Avatar, Tag } from 'antd';
-import {
-  SearchOutlined,
-  CheckSquareOutlined,
-  MediumOutlined,
-  TagOutlined,
-} from '@ant-design/icons';
+import { MediumOutlined, TagOutlined } from '@ant-design/icons';
 
 const { Meta } = Card;
 
 const Post = ({ post, avatar }) => {
   const { title, pubDate, link, thumbnail, author, categories } = post;
 
-  console.log(categories[0]);
   const categoryList = categories.map((category) => {
     return (
       <Tag icon={<TagOutlined />} color="default">

@@ -2,6 +2,7 @@
 
 .App {
   font-family: 'Source Code Pro', Menlo, Monaco, monospace;
+  margin: 50px 10px 10px 10px;
 }
 
 .nav {
@@ -19,6 +20,11 @@ li {
 .link {
   color: #f7b0b1;
 }
+
 .link:hover {
   color: gray;
+}
+
+.home-contents {
+  max-width: 50rem;
 }

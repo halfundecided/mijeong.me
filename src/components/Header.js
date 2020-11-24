@@ -16,7 +16,7 @@ const Header = () => {
           src: avatar,
         }}
       />
-      <ui className="nav">
+      <ul className="nav">
         <li>
           <Link className="link" to="/">
             Home
@@ -29,7 +29,7 @@ const Header = () => {
           </Link>
         </li>
         <li>/</li>
-      </ui>
+      </ul>
       <Divider />
     </div>
   );

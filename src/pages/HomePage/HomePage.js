@@ -1,10 +1,80 @@
 import React from 'react';
 import { Header, MediumFeed } from '../../components';
-import { Space, Typography, Divider, Tag, Carousel, Card } from 'antd';
-import { SyncOutlined } from '@ant-design/icons';
+import { Space, Typography, Divider, Tag, Carousel, Card, Table, Button } from 'antd';
+import { SyncOutlined, SnippetsOutlined } from '@ant-design/icons';
 import projectData from '../../data/projects';
 
 const { Title, Paragraph, Text, Link } = Typography;
+
+const ml_columns = [
+  {
+    title: '#',
+    dataIndex: 'index',
+    key: 'index',
+  },
+  {
+    title: 'Title',
+    dataIndex: 'title',
+    key: 'title',
+  },
+  {
+    title: 'Tags',
+    key: 'tags',
+    dataIndex: 'tags',
+    render: (tags) => (
+      <>
+        {tags.map((tag) => {
+          let color = tag.length > 3 ? 'geekblue' : 'green';
+          return (
+            <Tag color={color} key={tag}>
+              {tag.toUpperCase()}
+            </Tag>
+          );
+        })}
+      </>
+    ),
+  },
+  {
+    title: 'Action',
+    key: 'action',
+    render: (text, record) => (
+      <a href={(text, record)}>
+        <Button
+          className="table-icons"
+          href={record.action}
+          type="dashed"
+          shape="circle"
+          icon={<SnippetsOutlined />}
+        />
+      </a>
+    ),
+  },
+];
+
+const ml_data = [
+  {
+    key: '1',
+    index: '1',
+    title: 'Numerical Optimization for Logistic Regression',
+    tags: ['gd', 'sgd', 'mb-sgd', 'optimization'],
+    action:
+      'https://gist.github.com/halfundecided/b837f1405b275ba1e047f436445cd11d#file-numerical-opt-logistic-regression-ipynb',
+  },
+  {
+    key: '2',
+    index: '2',
+    title: 'Convolutional Neural Network for Image Recognition',
+    tags: ['cnn', 'keras'],
+    action: 'https://gist.github.com/halfundecided/a14dd6fcf7e78f4d283af3a18a2a9b24',
+  },
+  {
+    key: '3',
+    index: '3',
+    title: 'Seq2seq model for machine translation',
+    tags: ['lstm', 'bi-lstm'],
+    action: 'https://gist.github.com/halfundecided/a14dd6fcf7e78f4d283af3a18a2a9b24',
+  },
+];
 
 export default function HomePage() {
   const introduction = (
@@ -37,8 +107,6 @@ export default function HomePage() {
       <Divider />
     </Typography>
   );
-
-  console.log(projectData[0].title);
   const projects = (
     <>
       <Typography>
@@ -67,6 +135,22 @@ export default function HomePage() {
         </div>
       </Typography>
       <MediumFeed />
+      <Divider />
+    </>
+  );
+  const mlwork = (
+    <>
+      <Typography>
+        <Title level={3}>Some works on Machine Learning</Title>
+      </Typography>
+      <Table
+        columns={ml_columns}
+        dataSource={ml_data}
+        showHeader={false}
+        size="middle"
+        pagination={false}
+      />
+      <Divider />
     </>
   );
 
@@ -77,6 +161,7 @@ export default function HomePage() {
         {introduction}
         {experience}
         {projects}
+        {mlwork}
         {writings}
       </div>
     </div>

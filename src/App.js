@@ -1,10 +1,7 @@
-import React from 'react';
+import './App.css';
+
 function App() {
-  return (
-    <div>
-      <h3>Renewing...</h3>
-    </div>
-  );
+	return <div className='App'>Renewing...</div>;
 }
 
 export default App;

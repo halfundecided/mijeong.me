@@ -43,7 +43,6 @@ const MediumFeed = () => {
         avatar={{ src: profile.image }}
         style={{ marginTop: 20 }}
       ></PageHeader>
-      <Divider orientation="right">Posts</Divider>
       {loading ? (
         [...Array(4)].map((e, index) => {
           return (

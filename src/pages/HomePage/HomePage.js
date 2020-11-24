@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header, MediumFeed } from '../../components';
-import { Space, Typography, Divider } from 'antd';
+import { Space, Typography, Divider, Tag } from 'antd';
+import { SyncOutlined } from '@ant-design/icons';
 
 const { Title, Paragraph, Text, Link } = Typography;
 
@@ -19,6 +20,7 @@ export default function HomePage() {
         eget tincidunt lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
         volutpat metus quis est luctus placerat. Phasellus nunc sem, luctus
       </Paragraph>
+      <Divider />
     </Typography>
   );
   const section2 = (
@@ -31,17 +33,27 @@ export default function HomePage() {
         consectetur adipiscing elit. Fusce volutpat metus quis est luctus placerat. Phasellus nunc
         sem, luctus
       </Paragraph>
+      <Divider />
     </Typography>
+  );
+  const writings = (
+    <>
+      <Typography>
+        <Title level={3}>Writings</Title>
+        <Tag icon={<SyncOutlined spin />} color="#f7b0b1">
+          Sometimes Writing
+        </Tag>
+      </Typography>
+      <MediumFeed />
+    </>
   );
   return (
     <div>
       <Header />
       <div className="home-contents">
         {section1}
-        <Divider />
         {section2}
-        <Divider />
-        <MediumFeed />
+        {writings}
       </div>
     </div>
   );

@@ -33,16 +33,6 @@ const MediumFeed = () => {
 
   return (
     <>
-      <PageHeader
-        title={profile.title}
-        tags={
-          <Tag icon={<SyncOutlined spin />} color="geekblue">
-            Sometimes Writing
-          </Tag>
-        }
-        avatar={{ src: profile.image }}
-        style={{ marginTop: 20 }}
-      ></PageHeader>
       {loading ? (
         [...Array(4)].map((e, index) => {
           return (
@@ -51,8 +41,6 @@ const MediumFeed = () => {
                 style={{
                   width: 1000,
                   marginTop: 10,
-                  marginLeft: 15,
-                  marginRight: 15,
                 }}
                 actions={[
                   <SettingOutlined key="setting" />,
@@ -68,7 +56,7 @@ const MediumFeed = () => {
           );
         })
       ) : (
-        <Posts posts={posts} />
+        <Posts posts={posts} avatar={profile.image} />
       )}
     </>
   );

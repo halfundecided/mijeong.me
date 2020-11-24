@@ -6,7 +6,9 @@ import { Row, Col } from 'antd';
 function App() {
   return (
     <Row justify="center" className="App">
-      <HalfundecidedRouter />
+      <Col>
+        <HalfundecidedRouter />
+      </Col>
     </Row>
   );
 }

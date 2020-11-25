@@ -9,7 +9,7 @@ const Post = ({ post, avatar }) => {
 
   const categoryList = categories.map((category) => {
     return (
-      <Tag icon={<TagOutlined />} color="default">
+      <Tag className="medium-tag" icon={<TagOutlined />} color="default">
         {category}
       </Tag>
     );

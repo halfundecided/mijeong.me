@@ -9,9 +9,9 @@ const Header = () => {
       <PageHeader
         className="header"
         title="halfundecided | "
-        subTitle="welcome!"
+        subTitle="hey there!"
         avatar={{
-          size: 128,
+          size: { xs: 40, sm: 86, md: 128, lg: 128, xl: 128, xxl: 128 },
           alt: 'mj-avatar',
           src: avatar,
         }}

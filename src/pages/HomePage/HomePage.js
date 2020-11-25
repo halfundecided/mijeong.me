@@ -56,7 +56,7 @@ const ml_data = [
     key: '1',
     index: '1',
     title: 'Numerical Optimization for Logistic Regression',
-    tags: ['gd', 'sgd', 'mb-sgd', 'optimization'],
+    tags: ['gd', 'sgd', 'mb-sgd'],
     action:
       'https://gist.github.com/halfundecided/b837f1405b275ba1e047f436445cd11d#file-numerical-opt-logistic-regression-ipynb',
   },

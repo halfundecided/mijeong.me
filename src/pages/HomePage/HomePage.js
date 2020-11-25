@@ -1,9 +1,17 @@
 import React from 'react';
 import { Header, MediumFeed } from '../../components';
-import { Space, Typography, Divider, Tag, Carousel, Card, Table, Button } from 'antd';
-import { SyncOutlined, SnippetsOutlined } from '@ant-design/icons';
+import { Space, Typography, Divider, Tag, Carousel, Card, Table, Button, Timeline } from 'antd';
+import {
+  SyncOutlined,
+  SnippetsOutlined,
+  GithubOutlined,
+  LinkedinOutlined,
+  GoogleOutlined,
+  InstagramOutlined,
+  FileSearchOutlined,
+} from '@ant-design/icons';
 import projectData from '../../data/projects';
-
+// import resume from '../../assets/img/resume2020_mijeong_ban.pdf';
 const { Title, Paragraph, Text, Link } = Typography;
 
 const ml_columns = [
@@ -77,19 +85,121 @@ const ml_data = [
 ];
 
 export default function HomePage() {
-  const introduction = (
+  const introductionEN = (
     <Typography>
+      <Title level={3}>Intro</Title>
+      <Title level={5}>
+        {`Hi there`}
+        <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px" />
+        {` I'm Mijeong.`}
+      </Title>
       <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit consectetur neque.
-        Donec non lobortis elit, eu pulvinar odio. Suspendisse efficitur dui a eros accumsan auctor.
-        Duis iaculis justo vel risus hendrerit, id mattis risus pellentesque. Integer porta et mi
-        vel porttitor. Praesent venenatis blandit odio, eget tristique dolor tristique sit amet. Nam
-        mauris elit, lobortis sed volutpat nec, fringilla a arcu. Nunc efficitur sapien sed metus
-        consequat pellentesque. Etiam quis dignissim ex. Duis in efficitur elit. Phasellus rutrum
-        lectus eu volutpat congue. Donec viverra odio ac tempus varius. Maecenas aliquet at ante sit
-        amet sollicitudin. Morbi venenatis tristique nulla, vel iaculis lectus mollis eget. Proin
-        eget tincidunt lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-        volutpat metus quis est luctus placerat. Phasellus nunc sem, luctus
+        {`I find interesting and rewarding as inspirational ideas become a reality by my hands, and motivated by the conviction that this
+        series of processes will someday benefit the world.`}
+      </Paragraph>
+      <Paragraph>
+        {/* {`I am a CS student pursuing M.S. in Machine Learning at Stevens Institute of Technology, currently based in New York City.`} */}
+        <ul>
+          <li>
+            {`👩🏻‍🎓`} <i>{`B.S. in Computer Science at Stevens Institute of Technology (May 2020)`}</i>
+          </li>
+          <li>
+            {`🧑🏻‍🎓`}{' '}
+            <i>{`M.S. in Machine Learning at Stevens Institute of Technology (Dec 2020)`}</i>
+          </li>
+        </ul>
+      </Paragraph>
+      <Paragraph>
+        {`I am a full-time learner. My main interests are: `}
+        <ul>
+          <li>
+            {`Web Development with `}
+            <Text code>JavaScript ES6</Text>
+            <Text code>React</Text>
+            <Text code>React Native</Text>
+            <Text code>GraphQL</Text>
+          </li>
+          <li>
+            {`Machine Learning, especially Deep Learning with `}
+            <Text code>Python</Text>
+            <Text code>Keras</Text>
+          </li>
+          <li>{`Yoga🧘🏻‍♀️(obsessively) and Writing📝`}</li>
+        </ul>
+      </Paragraph>
+      <Paragraph>
+        <Text strong>{`What I am up to? `}</Text>
+        <ul>
+          <li>{`🛠 Renewing this website! - going back to a simpler UI`}</li>
+          <li>
+            {`📰 `}
+            <Link href={`https://github.com/halfundecided/nlp_toxicity_classification_analysis`}>
+              NLP project:
+            </Link>{' '}
+            <i>{`Comparison of Classification Models on Unintended Bias in Toxicity
+            Classification`}</i>
+          </li>
+          <li>
+            {`🔙 Revisiting React Basics by doing `}{' '}
+            <Link href={`https://github.com/halfundecided/react-small-samples`}>
+              simple projects
+            </Link>
+          </li>
+          <li>{`🖋 Medium posts on Deep Learning topics`}</li>
+        </ul>
+      </Paragraph>
+      <Paragraph>
+        {`Get to know more about me through here 👉🏻 `}
+        <Button
+          type="text"
+          shape="circle"
+          icon={<FileSearchOutlined style={{ textDecoration: `none`, color: `gray` }} />}
+        />
+        <Button
+          type="text"
+          shape="circle"
+          icon={<GithubOutlined style={{ textDecoration: `none`, color: `gray` }} />}
+          href={`https://github.com/halfundecided`}
+        />
+        {` `}
+        <Button
+          type="text"
+          shape="circle"
+          icon={<LinkedinOutlined style={{ textDecoration: `none`, color: `gray` }} />}
+          href={`https://www.linkedin.com/in/halfundecided/`}
+        />
+        {` `}
+        <Button
+          type="text"
+          shape="circle"
+          icon={<GoogleOutlined style={{ textDecoration: `none`, color: `gray` }} />}
+          href={`mailto:qksalwjd93@gmail.com`}
+        />
+        {` `}
+        <Button
+          type="text"
+          shape="circle"
+          icon={<InstagramOutlined style={{ textDecoration: `none`, color: `gray` }} />}
+          href={`https://www.instagram.com/__mijeong_is__/`}
+        />
+      </Paragraph>
+      <Divider />
+    </Typography>
+  );
+  const introductionKR = (
+    <Typography>
+      <Title level={3}>Intro</Title>
+      <Title level={5}>{`안녕하세요🙇🏻‍♀️ 개발자 반미정입니다.`}</Title>
+      <Paragraph>
+        {`재미있고 다양한 아이디어가 나를 통해 현실화되는 과정에서 흥미와 보람을 느끼고,
+        이러한 일련의 과정들이 언젠가 세상에 도움이 될 것이라는 확신을 통해 동기를 얻습니다.`}
+      </Paragraph>
+      <Paragraph>
+        {`현재 뉴욕에서 컴퓨터 공학 전공으로 학사과정을 마친 후 머신러닝을 전공으로 석사과정을 밟고 있으며 동시에 프리랜서 개발자로도 활동중입니다.`}
+      </Paragraph>
+      <Paragraph>
+        {`다수의 그룹/개인 프로젝트에 참여해왔고 지금도 현재진행형입니다. 새로운 기술들과 내가 좋아하는 기술들을 깊게 배우기위해 항상 사이드 프로젝트를 진행합니다.
+        내가 원하는 것 보다는 많은 사람들이 필요로 하는 서비스를 개발하기 위해 항상 고민하고 노력합니다. `}
       </Paragraph>
       <Divider />
     </Typography>
@@ -97,14 +207,16 @@ export default function HomePage() {
   const experience = (
     <Typography>
       <Title level={3}>Experience</Title>
-      <Paragraph>
-        efficitur elit. Phasellus rutrum lectus eu volutpat congue. Donec viverra odio ac tempus
-        varius. Maecenas aliquet at ante sit amet sollicitudin. Morbi venenatis tristique nulla, vel
-        iaculis lectus mollis eget. Proin eget tincidunt lectus. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. Fusce volutpat metus quis est luctus placerat. Phasellus nunc
-        sem, luctus
-      </Paragraph>
-      <Divider />
+      <Timeline mode="alternate">
+        <Timeline.Item color="green">
+          <Text strong>Front-End Developer</Text> at Fraction (Aug 2019 - May 2020)
+        </Timeline.Item>
+        <Timeline.Item color="blue">Teaching Assistant at SIT (Aug 2018 - May 2020)</Timeline.Item>
+        <Timeline.Item color="blue">
+          Adjunct Instructur at SIT Pre-college program (Summer 2019)
+        </Timeline.Item>
+        <Timeline.Item color="gray">Translator at Nomad Academy (May 2018 - Sep 2018</Timeline.Item>
+      </Timeline>
     </Typography>
   );
   const projects = (
@@ -158,7 +270,7 @@ export default function HomePage() {
     <div>
       <Header />
       <div className="home-contents">
-        {introduction}
+        {introductionEN}
         {experience}
         {projects}
         {mlwork}

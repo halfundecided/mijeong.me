@@ -9,6 +9,7 @@ import {
   GoogleOutlined,
   InstagramOutlined,
   FileSearchOutlined,
+  ArrowRightOutlined,
 } from '@ant-design/icons';
 import projectData from '../../data/projects';
 // import resume from '../../assets/img/resume2020_mijeong_ban.pdf';
@@ -32,7 +33,12 @@ const ml_columns = [
     render: (tags) => (
       <>
         {tags.map((tag) => {
-          let color = tag.length > 3 ? 'geekblue' : 'green';
+          let color = tag.length;
+          if (color < 3) color = '#596235';
+          else if (color >= 3 && color < 6) color = '#c3a6a0';
+          else if (color >= 6 && color < 9) color = '#a15c38';
+          else color = '#687477';
+
           return (
             <Tag color={color} key={tag}>
               {tag.toUpperCase()}
@@ -207,16 +213,27 @@ export default function HomePage() {
   const experience = (
     <Typography>
       <Title level={3}>Experience</Title>
+
       <Timeline mode="alternate">
-        <Timeline.Item color="green">
+        <Timeline.Item color="#ffa998">
           <Text strong>Front-End Developer</Text> at Fraction (Aug 2019 - May 2020)
         </Timeline.Item>
-        <Timeline.Item color="blue">Teaching Assistant at SIT (Aug 2018 - May 2020)</Timeline.Item>
-        <Timeline.Item color="blue">
+        <Timeline.Item color="#ffc397">
+          Teaching Assistant at SIT (Aug 2018 - May 2020)
+        </Timeline.Item>
+        <Timeline.Item color="#18acba">
           Adjunct Instructur at SIT Pre-college program (Summer 2019)
         </Timeline.Item>
-        <Timeline.Item color="gray">Translator at Nomad Academy (May 2018 - Sep 2018</Timeline.Item>
+        <Timeline.Item color="#f76566">
+          Translator at Nomad Academy (May 2018 - Sep 2018
+        </Timeline.Item>
       </Timeline>
+      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <Button type="dashed" icon={<ArrowRightOutlined />} size={`small`}>
+          Learn More
+        </Button>
+      </div>
+      <Divider />
     </Typography>
   );
   const projects = (

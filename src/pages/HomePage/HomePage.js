@@ -229,7 +229,7 @@ export default function HomePage() {
         </Timeline.Item>
       </Timeline>
       <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <Button type="dashed" icon={<ArrowRightOutlined />} size={`small`}>
+        <Button href={`/about`} type="dashed" icon={<ArrowRightOutlined />} size={`small`}>
           Learn More
         </Button>
       </div>

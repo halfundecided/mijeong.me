@@ -78,6 +78,20 @@
   font-size: 12px;
 }
 
+.experience-sub {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.experience-tags {
+  margin-bottom: 5px;
+}
+
+.experience-button {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width: 500px) {
   .medium-tags {
     display: flex;

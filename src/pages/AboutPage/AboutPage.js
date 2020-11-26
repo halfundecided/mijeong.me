@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Header } from '../../components';
-import { Typography, Avatar, Divider } from 'antd';
-import { UserOutlined } from '@ant-design/icons';
+import { Typography, Avatar, Divider, Tag, Button } from 'antd';
+import { DownOutlined, UpOutlined } from '@ant-design/icons';
 import stevenslogo from '../../assets/img/stevens-logo.png';
 
-const { Title, Paragraph, Text, Link } = Typography;
+const { Title, Paragraph, Text } = Typography;
 
 export default function AboutPage() {
+  const [expand, setExpand] = useState(false);
+
   const education = (
     <Typography>
       <Title level={3}>Education</Title>
@@ -33,7 +35,7 @@ export default function AboutPage() {
       <div className="education-header">
         <Avatar size={64} src={stevenslogo} />
         <div className="education-title">
-          <Title level={5}>{`Bachelor of Science in Machine Learning`}</Title>
+          <Title level={5}>{`Bachelor of Science in Computer Science`}</Title>
           <Text type="secondary">Stevens Institute of Technology | May 2020 | GPA: 3.9</Text>
         </div>
       </div>
@@ -54,10 +56,149 @@ export default function AboutPage() {
     </Typography>
   );
 
+  const experience = (
+    <Typography>
+      <Title level={3}>Experience</Title>
+      <Paragraph>
+        <Title level={5}>Front-End Developer at Fraction</Title>
+        <Text type="secondary" className="experience-sub">
+          August 2019 - May 2020 | Hoboken, NJ
+        </Text>
+      </Paragraph>
+      <div className="experience-tags">
+        <Tag color="#F8989A">@React</Tag>
+        <Tag color="#F8989A">@ReactNative</Tag>
+        <Tag color="#F8989A">@AWSLambda</Tag>
+        <Tag color="#F8989A">@APIGateway</Tag>
+        <Tag color="#F8989A">@Cognito</Tag>
+        <Tag color="#F8989A">@Amplify</Tag>
+        <Tag color="#F8989A">@DynamoDB</Tag>
+      </div>
+      <Paragraph>
+        Collaborate within team of five developers creating web service for users renting high-end
+        designer clothing. Communcate with stakeholders to understand business requirements,
+        participate in design meetings, write code, and conduct thorough testing and debuggng
+      </Paragraph>
+      <Paragraph>
+        <Text>{`📌 What I did for `}</Text>
+        <Text strong>Serverless Web Applicaton</Text>
+        <ul>
+          <li>
+            Spearheaded planning of web development process, designing wireframing, web-site user
+            flow and database schema, incorporating team and stakehollder feedback ggaiined from
+            brainstorming sessons
+          </li>
+          <li>
+            Enhancing user experience with Material UI, making the web application mobile
+            application mobile friendly and dynamic
+          </li>
+          <li>
+            Supporting back-end development, assisting team in building Rentals API with AWS Lambda
+          </li>
+        </ul>
+        <Text>{`📌 What I did for `}</Text>
+        <Text strong>React Native Mobile Application</Text>
+        <ul>
+          <li>
+            Initiating the mobile app workflow, designing and developing the Login/Registration page
+            and the Styling Profile page, routing all the backend functions from AWS Lambda using
+            API Gateway
+          </li>
+        </ul>
+      </Paragraph>
+      <Divider dashed="true" />
+      <Paragraph>
+        <Title level={5}>Teaching Assstant at Stevens Institute of Technology</Title>
+        <Text type="secondary" className="experience-sub">
+          August 2018 - May 2020 | Hoboken, NJ
+        </Text>
+      </Paragraph>
+      <div className="experience-tags">
+        <Text code>CS105 Intro to Scientific Computing</Text>
+        <Text code>CS347 Software Development Process</Text>
+        <Text code>CS385 Computer Org. and Programming</Text>
+        <Text code>CS442 Database Management Systems</Text>
+        <Text code>CS523 Programming the IoT using iOS</Text>
+        <Text code>CS546 Web Programming I</Text>
+        <Text code>CS554 Web Programming II</Text>
+      </div>
+      <Paragraph>
+        Served as TA for above courses. Create and grade labs, exams and papers, as well as assist
+        professor with additional duties as required
+      </Paragraph>
+      <Paragraph>
+        <Text>{`📌 What I did `}</Text>
+        <ul>
+          <li>
+            Arranged course schedule, homework instructions, and example codes, improving the
+            structure of the course
+          </li>
+          <li>
+            Created web programming course document combining all lecture notes, lab instructions
+            and lecture codebases allowing students to easily follow course materials
+          </li>
+          <li>
+            Designed supplementary course material to facilitate student learning such as creating
+            online tutorials for iOS development, teaching weekly recitation for Matlab programming,
+            and helping wiith assembly language
+          </li>
+          <li>
+            Provide open office hours to assist students wiith questions, advise on development
+            projects, or offer additional help understanding course materials
+          </li>
+        </ul>
+      </Paragraph>
+      {expand && (
+        <>
+          <Divider dashed="true" />
+          <Paragraph>
+            <Title level={5}>Adjunct Instructor at SIT Pre-college program</Title>
+            <Text type="secondary" className="experience-sub">
+              Summer 2019 | Hoboken, NJ
+            </Text>
+          </Paragraph>
+          <Paragraph>
+            Instructed Intro to Coomputer Science and Data Structure using JavaScript coourse for
+            high school students in the Exploring Career Options in Engineering and Sciencce (ECOES)
+            Computer Sccience module
+          </Paragraph>
+          <Paragraph>
+            <Text>{`📌 What I did `}</Text>
+            <ul>
+              <li>Developed entire curriculum, making all slides and preparing coding exercises</li>
+            </ul>
+          </Paragraph>
+          <Divider dashed="true" />
+          <Paragraph>
+            <Title level={5}>Translator at Nomad Academy</Title>
+            <Text type="secondary" className="experience-sub">
+              May 2018 - September 2018
+            </Text>
+          </Paragraph>
+          <Paragraph>
+            Worked as a translator at Nomad Academy which is an online interactive platform that
+            offers coding classes. Translated lecture videos from English to Korean for Korean
+            learners who want to become a JavaScript Fullstack Developer by learning TypeScript,
+            NodeJS, GraphQL, React and Apollo
+          </Paragraph>
+        </>
+      )}
+      <div className="experience-button">
+        <Button type="dashed" size="small" onClick={() => setExpand(!expand)}>
+          {expand ? <UpOutlined /> : <DownOutlined />}
+        </Button>
+      </div>
+      <Divider />
+    </Typography>
+  );
+
   return (
     <div>
       <Header />
-      <div className="contents">{education}</div>
+      <div className="contents">
+        {education}
+        {experience}
+      </div>
     </div>
   );
 }

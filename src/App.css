@@ -63,9 +63,16 @@
   color: gray;
 }
 
+.progress-section {
+  display: flex;
+  font-size: 12px;
+}
+.progress-title {
+  width: 120px;
+}
+
 .education-header {
   display: flex;
-  /* align-items: baseline; */
 }
 
 .education-title {

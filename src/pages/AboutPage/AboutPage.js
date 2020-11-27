@@ -1,10 +1,80 @@
 import React, { useState } from 'react';
 import { Header } from '../../components';
-import { Typography, Avatar, Divider, Tag, Button } from 'antd';
-import { DownOutlined, UpOutlined } from '@ant-design/icons';
+import { Typography, Avatar, Divider, Tag, Button, Row, Col, Progress } from 'antd';
+import { DownOutlined, UpOutlined, HeartOutlined } from '@ant-design/icons';
 import stevenslogo from '../../assets/img/stevens-logo.png';
 
 const { Title, Paragraph, Text } = Typography;
+
+const languages = [
+  {
+    title: 'JavaScript',
+    percent: 80,
+  },
+  {
+    title: 'TypeScript',
+    percent: 50,
+  },
+  {
+    title: 'Python',
+    percent: 85,
+  },
+  {
+    title: 'C/C++',
+    percent: 40,
+  },
+  {
+    title: 'Java',
+    percent: 40,
+  },
+  {
+    title: 'Swift',
+    percent: 50,
+  },
+  {
+    title: 'Erlang',
+    percent: 30,
+  },
+  {
+    title: 'Ocaml',
+    percent: 20,
+  },
+];
+
+const libraries = [
+  { title: 'React', percent: 80 },
+  { title: 'GraphQL', percent: 60 },
+  { title: 'React Native', percent: 80 },
+  { title: 'Express.js', percent: 65 },
+  { title: 'Material-UI', percent: 75 },
+  { title: 'Ant Design', percent: 70 },
+  { title: 'D3.js', percent: 30 },
+  { title: 'HTML5', percent: 90 },
+  { title: 'CSS3', percent: 70 },
+  { title: 'Sass', percent: 40 },
+];
+
+const ml = [
+  { title: 'TensorFlow', percent: 60 },
+  { title: 'NLTK', percent: 50 },
+  { title: 'Scikit Learn', percent: 30 },
+];
+
+const dbms = [
+  { title: 'MongoDB', percent: 75 },
+  { title: 'MySQL', percent: 50 },
+  { title: 'Redis', percent: 30 },
+  { title: 'DynamoDB', percent: 30 },
+];
+
+const tools = [
+  { title: 'Git/Github', percent: 80 },
+  { title: 'Vim', percent: 65 },
+  { title: 'VSCode', percent: 90 },
+  { title: 'XCode', percent: 50 },
+  { title: 'Docker', percent: 20 },
+  { title: 'LaTeX', percent: 50 },
+];
 
 export default function AboutPage() {
   const [expand, setExpand] = useState(false);
@@ -56,6 +126,64 @@ export default function AboutPage() {
     </Typography>
   );
 
+  const skill = (
+    <Typography>
+      <Title level={3}>Skills</Title>
+      <Row gutter={[8, 8]}>
+        <Col span={12}>
+          {languages.map((lang) => {
+            return (
+              <div className="progress-section">
+                <span className="progress-title">{lang.title}</span>
+                <Progress percent={lang.percent} size="small" strokeColor="#67595E" />
+              </div>
+            );
+          })}
+        </Col>
+        <Col span={12}>
+          {libraries.map((lib) => {
+            return (
+              <div className="progress-section">
+                <span className="progress-title">{lib.title}</span>
+                <Progress percent={lib.percent} size="small" strokeColor="#E8B4B8" />
+              </div>
+            );
+          })}
+        </Col>
+      </Row>
+      <Row gutter={[8, 8]}>
+        <Col span={12}>
+          {ml.map((item) => {
+            return (
+              <div className="progress-section">
+                <span className="progress-title">{item.title}</span>
+                <Progress percent={item.percent} size="small" strokeColor="#B6E2D3" />
+              </div>
+            );
+          })}
+          {dbms.map((item) => {
+            return (
+              <div className="progress-section">
+                <span className="progress-title">{item.title}</span>
+                <Progress percent={item.percent} size="small" strokeColor="#EED6D3" />
+              </div>
+            );
+          })}
+        </Col>
+        <Col span={12}>
+          {tools.map((tool) => {
+            return (
+              <div className="progress-section">
+                <span className="progress-title">{tool.title}</span>
+                <Progress percent={tool.percent} size="small" strokeColor="#A49393" />
+              </div>
+            );
+          })}
+        </Col>
+      </Row>
+      <Divider />
+    </Typography>
+  );
   const experience = (
     <Typography>
       <Title level={3}>Experience</Title>
@@ -197,6 +325,7 @@ export default function AboutPage() {
       <Header />
       <div className="contents">
         {education}
+        {skill}
         {experience}
       </div>
     </div>

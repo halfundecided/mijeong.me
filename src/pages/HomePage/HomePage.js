@@ -215,16 +215,16 @@ export default function HomePage() {
       <Title level={3}>Experience</Title>
 
       <Timeline mode="alternate">
-        <Timeline.Item color="#ffa998">
+        <Timeline.Item color="#D8A7B1">
           <Text strong>Front-End Developer</Text> at Fraction (Aug 2019 - May 2020)
         </Timeline.Item>
-        <Timeline.Item color="#ffc397">
+        <Timeline.Item color="#B6E2D3">
           Teaching Assistant at SIT (Aug 2018 - May 2020)
         </Timeline.Item>
-        <Timeline.Item color="#18acba">
+        <Timeline.Item color="#FAE8E0">
           Adjunct Instructur at SIT Pre-college program (Summer 2019)
         </Timeline.Item>
-        <Timeline.Item color="#f76566">
+        <Timeline.Item color="#EF7C8E">
           Translator at Nomad Academy (May 2018 - Sep 2018
         </Timeline.Item>
       </Timeline>

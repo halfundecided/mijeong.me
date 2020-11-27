@@ -135,7 +135,12 @@ export default function AboutPage() {
             return (
               <div className="progress-section">
                 <span className="progress-title">{lang.title}</span>
-                <Progress percent={lang.percent} size="small" strokeColor="#67595E" />
+                <Progress
+                  percent={lang.percent}
+                  size="small"
+                  strokeColor="#67595E"
+                  showInfo={false}
+                />
               </div>
             );
           })}
@@ -145,7 +150,12 @@ export default function AboutPage() {
             return (
               <div className="progress-section">
                 <span className="progress-title">{lib.title}</span>
-                <Progress percent={lib.percent} size="small" strokeColor="#E8B4B8" />
+                <Progress
+                  percent={lib.percent}
+                  size="small"
+                  strokeColor="#E8B4B8"
+                  showInfo={false}
+                />
               </div>
             );
           })}
@@ -157,7 +167,12 @@ export default function AboutPage() {
             return (
               <div className="progress-section">
                 <span className="progress-title">{item.title}</span>
-                <Progress percent={item.percent} size="small" strokeColor="#B6E2D3" />
+                <Progress
+                  percent={item.percent}
+                  size="small"
+                  strokeColor="#B6E2D3"
+                  showInfo={false}
+                />
               </div>
             );
           })}
@@ -165,7 +180,12 @@ export default function AboutPage() {
             return (
               <div className="progress-section">
                 <span className="progress-title">{item.title}</span>
-                <Progress percent={item.percent} size="small" strokeColor="#EED6D3" />
+                <Progress
+                  percent={item.percent}
+                  size="small"
+                  strokeColor="#EED6D3"
+                  showInfo={false}
+                />
               </div>
             );
           })}
@@ -175,7 +195,12 @@ export default function AboutPage() {
             return (
               <div className="progress-section">
                 <span className="progress-title">{tool.title}</span>
-                <Progress percent={tool.percent} size="small" strokeColor="#A49393" />
+                <Progress
+                  percent={tool.percent}
+                  size="small"
+                  strokeColor="#A49393"
+                  showInfo={false}
+                />
               </div>
             );
           })}
@@ -184,6 +209,7 @@ export default function AboutPage() {
       <Divider />
     </Typography>
   );
+
   const experience = (
     <Typography>
       <Title level={3}>Experience</Title>

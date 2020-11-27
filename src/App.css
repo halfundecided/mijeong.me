@@ -67,8 +67,9 @@
   display: flex;
   font-size: 12px;
 }
+
 .progress-title {
-  width: 120px;
+  width: 140px;
 }
 
 .education-header {
@@ -105,5 +106,9 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     margin-top: 20px;
+  }
+  .progress-section {
+    display: flex;
+    font-size: 10px;
   }
 }

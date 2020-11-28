@@ -1,6 +1,6 @@
 import React from 'react';
-import { Header, MediumFeed } from '../../components';
-import { Space, Typography, Divider, Tag, Carousel, Card, Table, Button, Timeline } from 'antd';
+import { Header, MediumFeed, Footer } from '../../components';
+import { Typography, Divider, Tag, Carousel, Card, Table, Button, Timeline } from 'antd';
 import {
   SyncOutlined,
   SnippetsOutlined,
@@ -293,6 +293,7 @@ export default function HomePage() {
         {mlwork}
         {writings}
       </div>
+      <Footer />
     </div>
   );
 }

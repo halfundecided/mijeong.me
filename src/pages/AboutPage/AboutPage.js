@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Header } from '../../components';
+import { Header, Footer } from '../../components';
 import { Typography, Avatar, Divider, Tag, Button, Row, Col, Progress } from 'antd';
 import { DownOutlined, UpOutlined, HeartOutlined } from '@ant-design/icons';
 import stevenslogo from '../../assets/img/stevens-logo.png';
@@ -354,6 +354,7 @@ export default function AboutPage() {
         {skill}
         {experience}
       </div>
+      <Footer />
     </div>
   );
 }

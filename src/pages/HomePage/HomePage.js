@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header, MediumFeed, Footer } from '../../components';
-import { Typography, Divider, Tag, Carousel, Card, Table, Button, Timeline } from 'antd';
+import { Typography, Divider, Tag, Carousel, Table, Button, Timeline } from 'antd';
 import {
   SyncOutlined,
   SnippetsOutlined,
@@ -12,7 +12,7 @@ import {
   ArrowRightOutlined,
 } from '@ant-design/icons';
 import projectData from '../../data/projects';
-// import resume from '../../assets/img/resume2020_mijeong_ban.pdf';
+import resume from '../../assets/img/resume2020_mijeong_ban.pdf';
 const { Title, Paragraph, Text, Link } = Typography;
 
 const ml_columns = [
@@ -34,10 +34,10 @@ const ml_columns = [
       <>
         {tags.map((tag) => {
           let color = tag.length;
-          if (color < 3) color = '#596235';
-          else if (color >= 3 && color < 6) color = '#c3a6a0';
-          else if (color >= 6 && color < 9) color = '#a15c38';
-          else color = '#687477';
+          if (color < 3) color = '#3D5B59';
+          else if (color >= 3 && color < 6) color = '#B5E5CF';
+          else if (color >= 6 && color < 9) color = '#FCB5AC';
+          else color = '#B99095';
 
           return (
             <Tag color={color} key={tag}>
@@ -159,7 +159,9 @@ export default function HomePage() {
         <Button
           type="text"
           shape="circle"
-          icon={<FileSearchOutlined style={{ textDecoration: `none`, color: `gray` }} />}
+          icon={
+            <FileSearchOutlined style={{ textDecoration: `none`, color: `gray` }} href={resume} />
+          }
         />
         <Button
           type="text"

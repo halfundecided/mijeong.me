@@ -1,8 +1,21 @@
 @import 'antd/dist/antd.css';
-
+html {
+  --antd-wave-shadow-color: #f7b0b1;
+}
 .App {
   font-family: 'Source Code Pro', Menlo, Monaco, monospace;
   margin: 50px 10px 10px 10px;
+}
+
+a.ant-typography,
+.ant-typography a {
+  color: #f7b0b1;
+}
+
+a.ant-typography:hover,
+.ant-typography a:hover {
+  color: gray;
+  border-color: gray;
 }
 
 .header {
@@ -19,15 +32,15 @@
 
 .nav > li {
   padding-right: 10px;
-  color: #f7b0b1;
+  color: #e8b4b8;
 }
 
 .link {
-  color: #f7b0b1;
+  color: #e8b4b8;
 }
 
 .link:hover {
-  color: gray;
+  color: #a49393;
 }
 
 .contents {
@@ -61,6 +74,20 @@
 .table-icons {
   text-decoration: none;
   color: gray;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.social-button {
+  color: #a49393;
+}
+
+.social-button:hover {
+  color: #67595e;
 }
 
 .progress-section {

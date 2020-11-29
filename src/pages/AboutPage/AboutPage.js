@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
 import { Header, Footer } from '../../components';
 import { Typography, Avatar, Divider, Tag, Button, Row, Col, Progress } from 'antd';
-import { DownOutlined, UpOutlined, HeartOutlined } from '@ant-design/icons';
+import {
+  FileSearchOutlined,
+  GithubOutlined,
+  LinkedinOutlined,
+  GoogleOutlined,
+  MediumOutlined,
+  InstagramOutlined,
+  DownOutlined,
+  UpOutlined,
+} from '@ant-design/icons';
 import stevenslogo from '../../assets/img/stevens-logo.png';
+import resume from '../../assets/img/resume2020_mijeong_ban.pdf';
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -79,6 +89,56 @@ const tools = [
 export default function AboutPage() {
   const [expand, setExpand] = useState(false);
 
+  const social = (
+    <>
+      <div className="social-links">
+        <Button className="social-button" type="text" href={resume} icon={<FileSearchOutlined />}>
+          Resume
+        </Button>
+        <Button
+          className="social-button"
+          type="text"
+          href={`https://github.com/halfundecided`}
+          icon={<GithubOutlined />}
+        >
+          Github
+        </Button>
+        <Button
+          className="social-button"
+          type="text"
+          href={`https://www.linkedin.com/in/halfundecided/`}
+          icon={<LinkedinOutlined />}
+        >
+          LinkedIn
+        </Button>
+        <Button
+          className="social-button"
+          type="text"
+          href={`mailto:halfundecided@gmail.com`}
+          icon={<GoogleOutlined />}
+        >
+          Email
+        </Button>
+        <Button
+          className="social-button"
+          type="text"
+          href={`https://halfundecided.medium.com`}
+          icon={<MediumOutlined />}
+        >
+          Medium
+        </Button>
+        <Button
+          className="social-button"
+          type="text"
+          href={`https://www.instagram.com/__mijeong_is__/`}
+          icon={<InstagramOutlined />}
+        >
+          Instagram
+        </Button>
+      </div>
+      <Divider />
+    </>
+  );
   const education = (
     <Typography>
       <Title level={3}>Education</Title>
@@ -350,6 +410,7 @@ export default function AboutPage() {
     <div>
       <Header />
       <div className="contents">
+        {social}
         {education}
         {skill}
         {experience}

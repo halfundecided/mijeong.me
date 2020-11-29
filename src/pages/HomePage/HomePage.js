@@ -241,7 +241,7 @@ export default function HomePage() {
   const projects = (
     <>
       <Typography>
-        <Title level={3}>Projects</Title>
+        <Title level={3}>Projects (Coming soon)</Title>
       </Typography>
       <Carousel className="project-carousel">
         {projectData.slice(0, 5).map((project) => {

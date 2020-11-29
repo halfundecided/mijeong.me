@@ -398,7 +398,12 @@ export default function AboutPage() {
         </>
       )}
       <div className="experience-button">
-        <Button type="dashed" size="small" onClick={() => setExpand(!expand)}>
+        <Button
+          className="experience-button-hover"
+          type="dashed"
+          size="small"
+          onClick={() => setExpand(!expand)}
+        >
           {expand ? <UpOutlined /> : <DownOutlined />}
         </Button>
       </div>

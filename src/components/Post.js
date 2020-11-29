@@ -20,7 +20,15 @@ const Post = ({ post, avatar }) => {
         marginTop: 10,
       }}
       cover={<img alt={title} src={thumbnail} height="200" style={{ objectFit: `cover` }} />}
-      actions={[<Button type="dashed" shape="circle" href={link} icon={<MediumOutlined />} />]}
+      actions={[
+        <Button
+          className="medium-icon"
+          type="dashed"
+          shape="circle"
+          href={link}
+          icon={<MediumOutlined />}
+        />,
+      ]}
     >
       <Meta
         avatar={<Avatar src={avatar} />}

@@ -4,7 +4,124 @@ html {
 }
 .App {
   font-family: 'Source Code Pro', Menlo, Monaco, monospace;
-  margin: 50px 10px 10px 10px;
+  padding: 50px 10px 10px 10px;
+}
+
+.dark-mode-selector {
+  background-color: inherit;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dark-mode-button {
+  font-size: 30px;
+}
+
+/* Dark theme */
+.App-dark {
+  font-family: 'Source Code Pro', Menlo, Monaco, monospace;
+  padding: 50px 10px 10px 10px;
+  background-color: #1c1c1c;
+}
+
+.App-dark .ant-typography {
+  color: #cccccc;
+}
+
+.App-dark .ant-page-header-heading-sub-title,
+.App-dark .ant-timeline {
+  color: #cccccc;
+}
+
+.App-dark .ant-page-header-heading-title,
+.App-dark h3.ant-typography {
+  color: #efefef;
+}
+
+.App-dark a.ant-typography {
+  color: #f7b0b1;
+}
+
+.App-dark .ant-divider {
+  background-color: #e8b4b8;
+}
+
+.App-dark .ant-divider-dashed {
+  background-color: #1c1c1c;
+}
+
+.App-dark .ant-timeline-item-tail {
+  border-left-color: #cccccc;
+}
+
+.App-dark .ant-timeline-item-head {
+  background-color: #1c1c1c;
+}
+
+.App-dark .ant-table-tbody {
+  background-color: #333333;
+  color: #cccccc;
+}
+
+.App-dark .ant-table-tbody > tr > td {
+  border-bottom-color: #797979;
+}
+
+.App-dark .ant-btn-dashed {
+  background-color: inherit;
+  border-color: #797979;
+}
+
+.App-dark .ant-table-cell {
+  background-color: #333333;
+}
+
+.App-dark .ant-table-row:hover {
+  background-color: #444444;
+}
+
+.App-dark .ant-table-cell:hover {
+  background-color: #444444;
+}
+
+.App-dark .ant-card,
+.App-dark .ant-card-actions {
+  background-color: #333333;
+}
+
+.App-dark .ant-card-bordered {
+  border-color: #333333;
+}
+
+.App-dark .ant-card-meta-detail > div {
+  color: #cccccc;
+}
+
+.App-dark .ant-card-actions {
+  border-top-color: #797979;
+}
+
+.App-dark .anticon-medium,
+.App-dark .anticon-down,
+.App-dark .anticon-file-search,
+.App-dark .anticon-github,
+.App-dark .anticon-linkedin,
+.App-dark .anticon-google,
+.App-dark .anticon-instagram {
+  color: #cccccc;
+}
+
+.App-dark .social-button {
+  color: #cccccc;
+}
+
+.App-dark a.ant-typography,
+.App-dark .ant-typography a {
+  color: #f7b0b1;
+}
+
+::selection {
+  background: #67595e;
 }
 
 a.ant-typography,
@@ -63,6 +180,11 @@ a.ant-typography:hover,
   margin-top: 5px;
 }
 
+.medium-icon:hover {
+  color: #67595e;
+  border-color: #67595e;
+}
+
 .project-carousel {
   height: 300px;
   color: #000;
@@ -74,6 +196,11 @@ a.ant-typography:hover,
 .table-icons {
   text-decoration: none;
   color: gray;
+}
+
+.table-icons:hover {
+  color: #67595e;
+  border-color: #67595e;
 }
 
 .social-links {
@@ -125,6 +252,11 @@ a.ant-typography:hover,
 .experience-button {
   display: flex;
   justify-content: center;
+}
+
+.experience-button-hover:hover {
+  color: #a49393;
+  border-color: #a49393;
 }
 
 .footer {

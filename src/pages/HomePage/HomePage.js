@@ -100,7 +100,7 @@ export default function HomePage() {
         {` I'm Mijeong.`}
       </Title>
       <Paragraph>
-        {`I find interesting and rewarding as inspirational ideas become a reality by my hands, and motivated by the conviction that this
+        {`I find interesting and rewarding when inspirational ideas become a reality by my hands, and motivated by the conviction that this
         series of processes will someday benefit the world.`}
       </Paragraph>
       <Paragraph>
@@ -122,7 +122,7 @@ export default function HomePage() {
             {`Web Development with `}
             <Text code>JavaScript ES6</Text>
             <Text code>React</Text>
-            <Text code>React Native</Text>
+            <Text code>MongoDB</Text>
             <Text code>GraphQL</Text>
           </li>
           <li>
@@ -286,7 +286,7 @@ export default function HomePage() {
   return (
     <div>
       <Header />
-      <div className="home-contents">
+      <div className="contents">
         {introductionEN}
         {experience}
         {projects}

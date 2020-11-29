@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PageHeader, Breadcrumb, Divider } from 'antd';
+import { PageHeader, Divider } from 'antd';
 import avatar from '../assets/img/avatar.jpg';
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
       <PageHeader
         className="header"
         title="halfundecided | "
-        subTitle="hey there!"
+        subTitle="welcome!"
         avatar={{
           size: { xs: 40, sm: 86, md: 128, lg: 128, xl: 128, xxl: 128 },
           alt: 'mj-avatar',

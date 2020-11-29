@@ -30,7 +30,7 @@
   color: gray;
 }
 
-.home-contents {
+.contents {
   max-width: 50rem;
 }
 
@@ -61,6 +61,21 @@
 .table-icons {
   text-decoration: none;
   color: gray;
+}
+
+.education-header {
+  display: flex;
+  /* align-items: baseline; */
+}
+
+.education-title {
+  margin-left: 10px;
+  padding-top: 5px;
+}
+
+.education-body {
+  padding-top: 5px;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 500px) {

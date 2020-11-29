@@ -93,10 +93,10 @@ const ml_data = [
 export default function HomePage() {
   const introductionEN = (
     <Typography>
-      <Title level={3}>Intro</Title>
+      <Title level={3}>{`Intro`}</Title>
       <Title level={5}>
         {`Hi there`}
-        <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px" />
+        <img src={`https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif`} width={`25px`} />
         {` I'm Mijeong.`}
       </Title>
       <Paragraph>
@@ -104,7 +104,6 @@ export default function HomePage() {
         series of processes will someday benefit the world.`}
       </Paragraph>
       <Paragraph>
-        {/* {`I am a CS student pursuing M.S. in Machine Learning at Stevens Institute of Technology, currently based in New York City.`} */}
         <ul>
           <li>
             {`👩🏻‍🎓`} <i>{`B.S. in Computer Science at Stevens Institute of Technology (May 2020)`}</i>
@@ -120,15 +119,15 @@ export default function HomePage() {
         <ul>
           <li>
             {`Web Development with `}
-            <Text code>JavaScript ES6</Text>
-            <Text code>React</Text>
-            <Text code>MongoDB</Text>
-            <Text code>GraphQL</Text>
+            <Text code>{`JavaScript ES6`}</Text>
+            <Text code>{`React`}</Text>
+            <Text code>{`MongoDB`}</Text>
+            <Text code>{`GraphQL`}</Text>
           </li>
           <li>
             {`Machine Learning, especially Deep Learning with `}
-            <Text code>Python</Text>
-            <Text code>Keras</Text>
+            <Text code>{`Python`}</Text>
+            <Text code>{`Keras`}</Text>
           </li>
           <li>{`Yoga🧘🏻‍♀️(obsessively) and Writing📝`}</li>
         </ul>
@@ -140,7 +139,7 @@ export default function HomePage() {
           <li>
             {`📰 `}
             <Link href={`https://github.com/halfundecided/nlp_toxicity_classification_analysis`}>
-              NLP project:
+              {`NLP project`}
             </Link>{' '}
             <i>{`Comparison of Classification Models on Unintended Bias in Toxicity
             Classification`}</i>
@@ -148,7 +147,7 @@ export default function HomePage() {
           <li>
             {`🔙 Revisiting React Basics by doing `}{' '}
             <Link href={`https://github.com/halfundecided/react-small-samples`}>
-              simple projects
+              {`simple projects`}
             </Link>
           </li>
           <li>{`🖋 Medium posts on Deep Learning topics`}</li>
@@ -196,7 +195,7 @@ export default function HomePage() {
   );
   const introductionKR = (
     <Typography>
-      <Title level={3}>Intro</Title>
+      <Title level={3}>{`Intro`}</Title>
       <Title level={5}>{`안녕하세요🙇🏻‍♀️ 개발자 반미정입니다.`}</Title>
       <Paragraph>
         {`재미있고 다양한 아이디어가 나를 통해 현실화되는 과정에서 흥미와 보람을 느끼고,
@@ -214,23 +213,24 @@ export default function HomePage() {
   );
   const experience = (
     <Typography>
-      <Title level={3}>Experience</Title>
+      <Title level={3}>{`Experience`}</Title>
 
       <Timeline mode="alternate">
-        <Timeline.Item color="#D8A7B1">
-          <Text strong>Front-End Developer</Text> at Fraction (Aug 2019 - May 2020)
+        <Timeline.Item color={`#D8A7B1`}>
+          <Text strong>{`Front-End Developer`}</Text>
+          {` at Fraction (Aug 2019 - May 2020)`}
         </Timeline.Item>
-        <Timeline.Item color="#B6E2D3">
-          Teaching Assistant at SIT (Aug 2018 - May 2020)
+        <Timeline.Item color={`#B6E2D3`}>
+          {`Teaching Assistant at SIT (Aug 2018 - May 2020)`}
         </Timeline.Item>
-        <Timeline.Item color="#FAE8E0">
-          Adjunct Instructur at SIT Pre-college program (Summer 2019)
+        <Timeline.Item color={`#FAE8E0`}>
+          {`Adjunct Instructur at SIT Pre-college program (Summer 2019)`}
         </Timeline.Item>
-        <Timeline.Item color="#EF7C8E">
-          Translator at Nomad Academy (May 2018 - Sep 2018
+        <Timeline.Item color={`#EF7C8E`}>
+          {`Translator at Nomad Academy (May 2018 - Sep 2018)`}
         </Timeline.Item>
       </Timeline>
-      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+      <div className="learn-more-button">
         <Button href={`/about`} type="dashed" icon={<ArrowRightOutlined />} size={`small`}>
           Learn More
         </Button>
@@ -241,7 +241,7 @@ export default function HomePage() {
   const projects = (
     <>
       <Typography>
-        <Title level={3}>Projects (Coming soon)</Title>
+        <Title level={3}>{`Projects (Coming soon)`}</Title>
       </Typography>
       <Carousel className="project-carousel">
         {projectData.slice(0, 5).map((project) => {
@@ -258,10 +258,10 @@ export default function HomePage() {
   const writings = (
     <>
       <Typography>
-        <Title level={3}>Writings</Title>
+        <Title level={3}>{`Writings`}</Title>
         <div className="writing-tag">
-          <Tag icon={<SyncOutlined spin />} color="#f7b0b1">
-            Actively Writing
+          <Tag icon={<SyncOutlined spin />} color={`#f7b0b1`}>
+            {`Actively Writing`}
           </Tag>
         </div>
       </Typography>
@@ -272,7 +272,7 @@ export default function HomePage() {
   const mlwork = (
     <>
       <Typography>
-        <Title level={3}>Some works on Machine Learning</Title>
+        <Title level={3}>{`Some works on Machine Learning`}</Title>
       </Typography>
       <Table
         columns={ml_columns}
@@ -291,7 +291,7 @@ export default function HomePage() {
       <div className="contents">
         {introductionEN}
         {experience}
-        {projects}
+        {/* {projects} */}
         {mlwork}
         {writings}
       </div>

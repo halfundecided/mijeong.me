@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import HalfundecidedRouter from './pages/HalfundecidedRouter';
 import './App.css';
 import { Row, Col, Button } from 'antd';
-import { BulbOutlined } from '@ant-design/icons';
 
 function App() {
   const [dark, setDark] = useState(false);

@@ -8,8 +8,8 @@ const Header = () => {
     <div>
       <PageHeader
         className="header"
-        title="halfundecided | "
-        subTitle="welcome!"
+        title={`halfundecided | `}
+        subTitle={`welcome!`}
         avatar={{
           size: { xs: 40, sm: 86, md: 128, lg: 128, xl: 128, xxl: 128 },
           alt: 'mj-avatar',
@@ -19,16 +19,16 @@ const Header = () => {
       <ul className="nav">
         <li>
           <Link className="link" to="/">
-            Home
+            {`Home`}
           </Link>
         </li>
-        <li>/</li>
+        <li>{`/`}</li>
         <li>
           <Link className="link" to="/about">
-            About
+            {`About`}
           </Link>
         </li>
-        <li>/</li>
+        <li>{`/`}</li>
       </ul>
       <Divider />
     </div>

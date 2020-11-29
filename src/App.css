@@ -7,14 +7,10 @@ html {
   padding: 50px 10px 10px 10px;
 }
 
-.dark-mode-selector {
-  background-color: inherit;
-  display: flex;
-  justify-content: flex-end;
-}
-
 .dark-mode-button {
-  font-size: 30px;
+  position: relative;
+  float: right;
+  font-size: 25px;
 }
 
 /* Dark theme */
@@ -193,6 +189,10 @@ a.ant-typography:hover,
   /* background-color: #364d79; */
 }
 
+.learn-more-button {
+  display: flex;
+  justify-content: flex-end;
+}
 .table-icons {
   text-decoration: none;
   color: gray;

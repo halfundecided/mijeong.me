@@ -329,9 +329,9 @@ export default function HomePage() {
   const projects = (
     <>
       <Typography>
-        <Title level={3}>{`Projects (Coming soon)`}</Title>
+        <Title level={3}>{`Projects (Coming very soon)`}</Title>
       </Typography>
-      <Carousel className="project-carousel">
+      {/* <Carousel className="project-carousel">
         {projectData.slice(0, 5).map((project) => {
           return (
             <div>
@@ -339,7 +339,7 @@ export default function HomePage() {
             </div>
           );
         })}
-      </Carousel>
+      </Carousel> */}
       <Divider />
     </>
   );
@@ -383,9 +383,9 @@ export default function HomePage() {
           unCheckedChildren={`KR`}
           onChange={() => setKr(!kr)}
         />
-        {kr ? introductionEN : introductionKR}
+        {kr ? introductionKR : introductionEN}
         {experience}
-        {/* {projects} */}
+        {projects}
         {mlwork}
         {writings}
       </div>

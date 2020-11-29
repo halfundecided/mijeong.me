@@ -8,8 +8,8 @@ const Header = () => {
     <div>
       <PageHeader
         className="header"
-        title={`halfundecided | `}
-        subTitle={`welcome!`}
+        title={`halfundecided`}
+        // subTitle={`welcome!`}
         avatar={{
           size: { xs: 40, sm: 86, md: 128, lg: 128, xl: 128, xxl: 128 },
           alt: 'mj-avatar',

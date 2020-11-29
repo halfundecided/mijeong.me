@@ -13,6 +13,12 @@ html {
   font-size: 25px;
 }
 
+.language-button {
+  position: relative;
+  float: right;
+  background-color: #f4b9b8;
+}
+
 /* Dark theme */
 .App-dark {
   font-family: 'Source Code Pro', Menlo, Monaco, monospace;

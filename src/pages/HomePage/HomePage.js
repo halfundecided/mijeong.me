@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Header, MediumFeed, Footer } from '../../components';
-import { Typography, Divider, Tag, Carousel, Table, Button, Timeline } from 'antd';
+import { Typography, Divider, Tag, Carousel, Table, Button, Timeline, Switch } from 'antd';
 import {
   SyncOutlined,
   SnippetsOutlined,
@@ -64,7 +64,6 @@ const ml_columns = [
     ),
   },
 ];
-
 const ml_data = [
   {
     key: '1',
@@ -91,6 +90,7 @@ const ml_data = [
 ];
 
 export default function HomePage() {
+  const [kr, setKr] = useState(false);
   const introductionEN = (
     <Typography>
       <Title level={3}>{`Intro`}</Title>
@@ -202,11 +202,99 @@ export default function HomePage() {
         이러한 일련의 과정들이 언젠가 세상에 도움이 될 것이라는 확신을 통해 동기를 얻습니다.`}
       </Paragraph>
       <Paragraph>
-        {`현재 뉴욕에서 컴퓨터 공학 전공으로 학사과정을 마친 후 머신러닝을 전공으로 석사과정을 밟고 있으며 동시에 프리랜서 개발자로도 활동중입니다.`}
+        {`현재 뉴욕에서 Computer Science 전공으로 학사과정을 마친 후 Machine Learning을 전공으로 석사과정을 밟고 있으며 동시에 프리랜서 개발자로도 활동중입니다.`}
       </Paragraph>
       <Paragraph>
-        {`다수의 그룹/개인 프로젝트에 참여해왔고 지금도 현재진행형입니다. 새로운 기술들과 내가 좋아하는 기술들을 깊게 배우기위해 항상 사이드 프로젝트를 진행합니다.
+        {`다수의 그룹/개인 프로젝트에 참여해왔고 지금도 현재진행형입니다. 내가 좋아하는 기술들을 깊게, 그리고 새로운 기술들을 배우기위해 항상 사이드 프로젝트를 진행합니다.
         내가 원하는 것 보다는 많은 사람들이 필요로 하는 서비스를 개발하기 위해 항상 고민하고 노력합니다. `}
+      </Paragraph>
+      <Paragraph>
+        <ul>
+          <li>
+            {`빠르게 변화하는 `}
+            <Text strong>{`앱/웹 개발 관련 기술`}</Text>
+            {`들에 가장 관심이 많습니다. 주로 프론트엔드 개발을 하지만 풀스택 개발자로 거듭나기 위해 항상 노력합니다. 즐겨 사용하는 기술은`}
+            <Text code>{`React`}</Text>
+            <Text code>{`React Native`}</Text>
+            <Text code>{`GraphQL`}</Text>
+            {`입니다.`}
+          </li>
+          <li>
+            {`대학원에서 전공중인 `}
+            <Text strong>{`머신러닝 분야`}</Text>
+            {`를 수학적 기초이론부터 실전까지 꼼꼼히 내것으로 만들기 위해 열심히 공부중입니다. 그 중에서도 딥러닝 분야에 더 큰 흥미를 느끼고 있고 `}
+            <Text code>{`Python`}</Text>
+            {`을 기반으로 `}
+            <Text code>{`Keras`}</Text>
+            {`를 주로 사용합니다. 또한 습득한 지식을 공유하기 위해 Medium에서 기술포스트를 짬짬히 쓰기도 합니다(포스팅들은 아래에).`}
+          </li>
+          <li>{`요가🧘🏻‍♀️를 사랑합니다. 4년째 꾸준히 해왔지만 여전히 beginner입니다.`}</li>
+          <li>
+            {`코딩만 하는 로봇이 되지 않기위해 다른분야(역사/문학/과학)의 지식을 쌓기 위한 독서를 즐겨합니다.`}
+            <li>
+              {`요즘 읽고있는 책:`}
+              <Text code>{`살고 싶다는 농담. 허지웅.`}</Text>
+            </li>
+          </li>
+        </ul>
+      </Paragraph>
+      <Paragraph>
+        <Text strong>{`요즘 하는 것들? `}</Text>
+        <ul>
+          <li>{`🛠 이 포트폴리오 웹페이지를 뚝딱뚝딱 리뉴중입니다.`}</li>
+          <li>
+            {`📰 `}
+            <Link href={`https://github.com/halfundecided/nlp_toxicity_classification_analysis`}>
+              {`NLP(Natural Language Processing) 프로젝트`}
+            </Link>
+            <i>{`; Comparison of Classification Models on Unintended Bias in Toxicity
+            Classification`}</i>
+          </li>
+          <li>
+            <Link href={`https://github.com/halfundecided/react-small-samples`}>
+              {`🔙 간단한 프로젝트`}
+            </Link>
+            {`들을 하면서 React 기초 다시 리뷰하기 `}
+          </li>
+          <li>{`🖋 딥러닝에 관한 Medium 기술 포스팅`}</li>
+        </ul>
+      </Paragraph>
+      <Paragraph>
+        {`저에 대해서 더 알고싶다면 이곳으로 👉🏻 `}
+        <Button
+          type="text"
+          shape="circle"
+          icon={
+            <FileSearchOutlined style={{ textDecoration: `none`, color: `gray` }} href={resume} />
+          }
+        />
+        <Button
+          type="text"
+          shape="circle"
+          icon={<GithubOutlined style={{ textDecoration: `none`, color: `gray` }} />}
+          href={`https://github.com/halfundecided`}
+        />
+        {` `}
+        <Button
+          type="text"
+          shape="circle"
+          icon={<LinkedinOutlined style={{ textDecoration: `none`, color: `gray` }} />}
+          href={`https://www.linkedin.com/in/halfundecided/`}
+        />
+        {` `}
+        <Button
+          type="text"
+          shape="circle"
+          icon={<GoogleOutlined style={{ textDecoration: `none`, color: `gray` }} />}
+          href={`mailto:qksalwjd93@gmail.com`}
+        />
+        {` `}
+        <Button
+          type="text"
+          shape="circle"
+          icon={<InstagramOutlined style={{ textDecoration: `none`, color: `gray` }} />}
+          href={`https://www.instagram.com/__mijeong_is__/`}
+        />
       </Paragraph>
       <Divider />
     </Typography>
@@ -289,7 +377,13 @@ export default function HomePage() {
     <div>
       <Header />
       <div className="contents">
-        {introductionEN}
+        <Switch
+          className="language-button"
+          checkedChildren={`EN`}
+          unCheckedChildren={`KR`}
+          onChange={() => setKr(!kr)}
+        />
+        {kr ? introductionEN : introductionKR}
         {experience}
         {/* {projects} */}
         {mlwork}

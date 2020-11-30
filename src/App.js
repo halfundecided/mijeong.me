@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import ReactGA from 'react-ga';
 import HalfundecidedRouter from './pages/HalfundecidedRouter';
 import './App.css';
 import { Row, Col, Button } from 'antd';
+
+ReactGA.initialize('UA-166904526-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
   const [dark, setDark] = useState(false);

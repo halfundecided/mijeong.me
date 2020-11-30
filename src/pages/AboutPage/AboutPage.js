@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import ReactGA from 'react-ga';
 import { Header, Footer } from '../../components';
 import { Typography, Avatar, Divider, Tag, Button, Row, Col, Progress } from 'antd';
 import { DownOutlined, UpOutlined } from '@ant-design/icons';
 import { languages, libraries, ml, dbms, tools } from '../../data/skills';
 import socialLinkData from '../../data/socialLinks';
 import stevenslogo from '../../assets/img/stevens-logo.png';
+
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const { Title, Paragraph, Text } = Typography;
 

@@ -97,8 +97,11 @@ export default function HomePage() {
       <Title level={5}>
         {`Hi there`}
         <img src={`https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif`} width={`25px`} />
-        {` I'm Mijeong.`}
+        {` I'm Mijeong`}
       </Title>
+      <Paragraph>
+        {`and I am a Software Engineer, currently based in the San Francisco Bay Area.`}
+      </Paragraph>
       <Paragraph>
         {`I find interesting and rewarding when inspirational ideas become a reality by my hands, and motivated by the conviction that this
         series of processes will someday benefit the world.`}
@@ -118,16 +121,16 @@ export default function HomePage() {
         {`I am a full-time learner. My main interests are: `}
         <ul>
           <li>
+            {`Machine Learning, especially Deep Learning with `}
+            <Text code>{`Python`}</Text>
+            <Text code>{`Keras`}</Text>
+          </li>
+          <li>
             {`Web Development with `}
             <Text code>{`JavaScript ES6`}</Text>
             <Text code>{`React`}</Text>
             <Text code>{`MongoDB`}</Text>
             <Text code>{`GraphQL`}</Text>
-          </li>
-          <li>
-            {`Machine Learning, especially Deep Learning with `}
-            <Text code>{`Python`}</Text>
-            <Text code>{`Keras`}</Text>
           </li>
           <li>{`Yoga🧘🏻‍♀️(obsessively) and Writing📝`}</li>
         </ul>
@@ -202,7 +205,7 @@ export default function HomePage() {
         이러한 일련의 과정들이 언젠가 세상에 도움이 될 것이라는 확신을 통해 동기를 얻습니다.`}
       </Paragraph>
       <Paragraph>
-        {`현재 뉴욕에서 Computer Science 전공으로 학사과정을 마친 후 Machine Learning을 전공으로 석사과정을 밟고 있으며 동시에 프리랜서 개발자로도 활동중입니다.`}
+        {`뉴욕에서 Computer Science 전공으로 학사과정, Machine Learning을 전공으로 석사과정을 마친 후 현재 실리콘밸리 지역에서 Software Engineer로 활동중입니다. `}
       </Paragraph>
       <Paragraph>
         {`다수의 그룹/개인 프로젝트에 참여해왔고 지금도 현재진행형입니다. 내가 좋아하는 기술들을 깊게, 그리고 새로운 기술들을 배우기위해 항상 사이드 프로젝트를 진행합니다.
@@ -220,7 +223,7 @@ export default function HomePage() {
             {`입니다.`}
           </li>
           <li>
-            {`대학원에서 전공중인 `}
+            {`대학원에서 전공한 `}
             <Text strong>{`머신러닝 분야`}</Text>
             {`를 수학적 기초이론부터 실전까지 꼼꼼히 내것으로 만들기 위해 열심히 공부중입니다. 그 중에서도 딥러닝 분야에 더 큰 흥미를 느끼고 있고 `}
             <Text code>{`Python`}</Text>
@@ -304,6 +307,10 @@ export default function HomePage() {
       <Title level={3}>{`Experience`}</Title>
 
       <Timeline mode="alternate">
+        <Timeline.Item color={`#EF7C8E`}>
+          <Text strong>{`Software Engineer`}</Text>
+          {` at Cipherome (Jan 2021 - Present)`}
+        </Timeline.Item>
         <Timeline.Item color={`#D8A7B1`}>
           <Text strong>{`Front-End Developer`}</Text>
           {` at Fraction (Aug 2019 - May 2020)`}

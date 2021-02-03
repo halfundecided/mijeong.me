@@ -214,22 +214,22 @@ export default function HomePage() {
       <Paragraph>
         <ul>
           <li>
-            {`빠르게 변화하는 `}
-            <Text strong>{`앱/웹 개발 관련 기술`}</Text>
-            {`들에 가장 관심이 많습니다. 주로 프론트엔드 개발을 하지만 풀스택 개발자로 거듭나기 위해 항상 노력합니다. 즐겨 사용하는 기술은`}
-            <Text code>{`React`}</Text>
-            <Text code>{`React Native`}</Text>
-            <Text code>{`GraphQL`}</Text>
-            {`입니다.`}
-          </li>
-          <li>
             {`대학원에서 전공한 `}
             <Text strong>{`머신러닝 분야`}</Text>
             {`를 수학적 기초이론부터 실전까지 꼼꼼히 내것으로 만들기 위해 열심히 공부중입니다. 그 중에서도 딥러닝 분야에 더 큰 흥미를 느끼고 있고 `}
             <Text code>{`Python`}</Text>
             {`을 기반으로 `}
             <Text code>{`Keras`}</Text>
-            {`를 주로 사용합니다. 또한 습득한 지식을 공유하기 위해 Medium에서 기술포스트를 짬짬히 쓰기도 합니다(포스팅들은 아래에).`}
+            {`를 주로 사용합니다. 최근에는 부쩍 NLP 기술들에 관심이 많아졌습니다. 또한 습득한 지식을 공유하기 위해 Medium에서 기술포스트를 짬짬히 쓰기도 합니다(포스팅들은 아래에).`}
+          </li>
+          <li>
+            {`빠르게 변화하는 `}
+            <Text strong>{`앱/웹 개발 관련 기술`}</Text>
+            {`들에 관심이 많습니다. 주로 프론트엔드 개발을 하지만 풀스택 개발자로 거듭나기 위해 항상 노력합니다. 즐겨 사용하는 기술은`}
+            <Text code>{`React`}</Text>
+            <Text code>{`React Native`}</Text>
+            <Text code>{`GraphQL`}</Text>
+            {`입니다.`}
           </li>
           <li>{`요가🧘🏻‍♀️를 사랑합니다. 4년째 꾸준히 해왔지만 여전히 beginner입니다.`}</li>
           <li>
@@ -391,7 +391,7 @@ export default function HomePage() {
           onChange={() => setKr(!kr)}
         />
         {kr ? introductionKR : introductionEN}
-        {experience}
+        {/* {experience} */}
         {projects}
         {mlwork}
         {writings}

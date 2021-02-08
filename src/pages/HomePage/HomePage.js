@@ -109,11 +109,11 @@ export default function HomePage() {
       <Paragraph>
         <ul>
           <li>
-            {`👩🏻‍🎓`} <i>{`B.S. in Computer Science at Stevens Institute of Technology (May 2020)`}</i>
-          </li>
-          <li>
             {`🧑🏻‍🎓`}{' '}
             <i>{`M.S. in Machine Learning at Stevens Institute of Technology (Dec 2020)`}</i>
+          </li>
+          <li>
+            {`👩🏻‍🎓`} <i>{`B.S. in Computer Science at Stevens Institute of Technology (May 2020)`}</i>
           </li>
         </ul>
       </Paragraph>
@@ -138,7 +138,7 @@ export default function HomePage() {
       <Paragraph>
         <Text strong>{`What I am up to? `}</Text>
         <ul>
-          <li>{`🛠 Renewing this website! - going back to a simpler UI`}</li>
+          {/* <li>{`🛠 Renewing this website! - going back to a simpler UI`}</li>
           <li>
             {`📰 `}
             <Link href={`https://github.com/halfundecided/nlp_toxicity_classification_analysis`}>
@@ -152,8 +152,10 @@ export default function HomePage() {
             <Link href={`https://github.com/halfundecided/react-small-samples`}>
               {`simple projects`}
             </Link>
-          </li>
+          </li> */}
           <li>{`🖋 Medium posts on Deep Learning topics`}</li>
+          <li>{`🦠 Getting into Machine Learning in Pharmacogenomics by reviewing many papers/articles and building ml models`}</li>
+          <li>{`📘 Kaggle competitions`}</li>
         </ul>
       </Paragraph>
       <Paragraph>
@@ -245,7 +247,7 @@ export default function HomePage() {
         <Text strong>{`요즘 하는 것들? `}</Text>
         <ul>
           <li>{`🛠 이 포트폴리오 웹페이지를 뚝딱뚝딱 리뉴중입니다.`}</li>
-          <li>
+          {/* <li>
             {`📰 `}
             <Link href={`https://github.com/halfundecided/nlp_toxicity_classification_analysis`}>
               {`NLP(Natural Language Processing) 프로젝트`}
@@ -258,8 +260,9 @@ export default function HomePage() {
               {`🔙 간단한 프로젝트`}
             </Link>
             {`들을 하면서 React 기초 다시 리뷰하기 `}
-          </li>
+          </li> */}
           <li>{`🖋 딥러닝에 관한 Medium 기술 포스팅`}</li>
+          <li>{`🦠 머신러닝 기술을 pharmacogenomics분야에 접목시키는 분야에 관심을 갖고 일하고 있습니다.`}</li>
         </ul>
       </Paragraph>
       <Paragraph>

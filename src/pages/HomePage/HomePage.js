@@ -395,8 +395,8 @@ export default function HomePage() {
         />
         {kr ? introductionKR : introductionEN}
         {/* {experience} */}
-        {projects}
-        {mlwork}
+        {/* projects */}
+        {/* mlwork */}
         {writings}
       </div>
       <Footer />

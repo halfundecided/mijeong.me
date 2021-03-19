@@ -35,7 +35,7 @@ export default function AboutPage() {
         <Avatar size={64} src={stevenslogo} />
         <div className="education-title">
           <Title level={5}>{`Master of Science in Machine Learning`}</Title>
-          <Text type={`secondary`}>{`Stevens Institute of Technology | Dec 2020 | GPA: 4.0`}</Text>
+          <Text type={`secondary`}>{`Stevens Institute of Technology | Dec 2020 | GPA: 4.0/4.0`}</Text>
         </div>
       </div>
       <div className="education-body">
@@ -56,7 +56,7 @@ export default function AboutPage() {
         <Avatar size={64} src={stevenslogo} />
         <div className="education-title">
           <Title level={5}>{`Bachelor of Science in Computer Science`}</Title>
-          <Text type={`secondary`}>{`Stevens Institute of Technology | May 2020 | GPA: 3.9`}</Text>
+          <Text type={`secondary`}>{`Stevens Institute of Technology | May 2020 | GPA: 3.9/4.0`}</Text>
         </div>
       </div>
       <div className="education-body">
